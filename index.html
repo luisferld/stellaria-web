@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stellaria · poliedros y estelaciones</title>
+<meta name="description" content="Stellaria: un puzle de poliedros y estelaciones para iPhone y iPad. Cada estelación se monta pieza a pieza; la geometría es de verdad.">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<main>
+  <div class="cabecera">
+    <div>
+      <h1>Stellaria</h1>
+      <p class="sub">Poliedros y estelaciones · un puzle</p>
+    </div>
+    <div class="marca" aria-hidden="true"></div>
+  </div>
+
+  <canvas class="solido" id="solido" width="720" height="720" aria-label="Un icosaedro girando, dibujado a tinta"></canvas>
+
+  <div class="placa">
+    <p>Un sólido es solo el principio. Prolonga sus caras y aparecen las estelaciones: cada una se monta pieza a pieza, girando y soltando, con la geometría de verdad debajo.</p>
+    <p>Próximamente en la App Store, para iPhone y iPad.</p>
+  </div>
+
+  <p>
+    <a class="hoja" href="soporte/">Soporte</a>
+    <a class="hoja" href="privacidad/">Privacidad</a>
+  </p>
+
+  <p class="pie">© 2026 Luis Fernando Lendrino Díaz · <a href="mailto:bit4qubit@gmail.com">bit4qubit@gmail.com</a></p>
+</main>
+<script>
+// El icosaedro a tinta, girando: la casa dibuja sus sólidos, no los fotografía.
+(function(){
+  const c=document.getElementById('solido'),g=c.getContext('2d');
+  const t=(1+Math.sqrt(5))/2, V=[[-1,t,0],[1,t,0],[-1,-t,0],[1,-t,0],[0,-1,t],[0,1,t],[0,-1,-t],[0,1,-t],[t,0,-1],[t,0,1],[-t,0,-1],[-t,0,1]].map(v=>{const n=Math.hypot(...v);return v.map(x=>x/n)});
+  const F=[[0,11,5],[0,5,1],[0,1,7],[0,7,10],[0,10,11],[1,5,9],[5,11,4],[11,10,2],[10,7,6],[7,1,8],[3,9,4],[3,4,2],[3,2,6],[3,6,8],[3,8,9],[4,9,5],[2,4,11],[6,2,10],[8,6,7],[9,8,1]];
+  const L=[-0.35,0.75,0.55], ln=Math.hypot(...L);
+  function rot(v,a,b){const[x,y,z]=v;const ca=Math.cos(a),sa=Math.sin(a),cb=Math.cos(b),sb=Math.sin(b);const x1=ca*x+sa*z,z1=-sa*x+ca*z;return[x1,cb*y-sb*z1,sb*y+cb*z1]}
+  function draw(time){
+    const a=time*0.0004, b=-0.42, w=c.width, s=w*0.36, cx=w/2, cy=w/2;
+    g.clearRect(0,0,w,w);
+    const P=V.map(v=>rot(v,a,b));
+    const faces=F.map(f=>{const p=f.map(i=>P[i]);const u=[p[1][0]-p[0][0],p[1][1]-p[0][1],p[1][2]-p[0][2]],v=[p[2][0]-p[0][0],p[2][1]-p[0][1],p[2][2]-p[0][2]];let n=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]];const nn=Math.hypot(...n);n=n.map(x=>x/nn);return{p,n,z:(p[0][2]+p[1][2]+p[2][2])/3}}).filter(f=>f.n[2]>0).sort((x,y)=>x.z-y.z);
+    for(const f of faces){const d=Math.max(0,(f.n[0]*L[0]+f.n[1]*L[1]+f.n[2]*L[2])/ln),k=0.25+0.75*d;
+      const r=Math.round(217+(246-217)*k),gg=Math.round(211+(242-211)*k),bb=Math.round(192+(230-192)*k);
+      g.beginPath();f.p.forEach((q,i)=>g[i?'lineTo':'moveTo'](cx+q[0]*s,cy-q[1]*s));g.closePath();
+      g.fillStyle=`rgb(${r},${gg},${bb})`;g.fill();g.strokeStyle='#211F1C';g.lineWidth=w*0.0022;g.stroke();}
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+})();
+</script>
+</body>
+</html>

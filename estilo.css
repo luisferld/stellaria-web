@@ -1,0 +1,22 @@
+/* Stellaria · la casa: papel, tinta y el bermellón como único grito. */
+:root{--papel:#F1ECDC;--hoja:#F6F2E6;--tinta:#211F1C;--tinta-suave:#6B665C;--rojo:#D54529}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif}
+a{color:var(--rojo);text-decoration:none}a:hover{text-decoration:underline}
+main{max-width:720px;margin:0 auto;padding:40px 22px 80px}
+h1,h2{font-weight:900;letter-spacing:.08em;text-transform:uppercase;line-height:1.1}
+h1{font-size:34px;margin:0 0 6px}h2{font-size:15px;margin:36px 0 10px}
+.sub{color:var(--tinta-suave);text-transform:uppercase;letter-spacing:.06em;font-size:14px;margin:0 0 30px}
+.marca{position:relative;width:60px;height:34px;margin-left:auto}
+.marca::before{content:"";position:absolute;left:0;top:0;width:16px;height:16px;background:var(--rojo)}
+.marca::after{content:"";position:absolute;left:8px;top:20px;width:46px;height:3px;background:var(--tinta);transform:rotate(-30deg);transform-origin:left center}
+.cabecera{display:flex;align-items:flex-start;gap:16px;margin-bottom:34px}
+.placa{background:var(--hoja);border:1px solid var(--tinta);padding:18px 20px;margin:14px 0}
+.placa p{margin:0 0 10px}.placa p:last-child{margin:0}
+.boton{display:inline-block;background:var(--rojo);color:var(--papel);font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:12px 26px;margin:6px 0}
+.boton:hover{text-decoration:none;filter:brightness(.95)}
+.hoja{display:inline-block;background:var(--hoja);color:var(--tinta);border:1px solid var(--tinta);font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:11px 22px;margin:6px 8px 6px 0}
+.pie{margin-top:60px;color:var(--tinta-suave);font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+.pie a{color:var(--tinta-suave)}
+canvas.solido{display:block;width:min(100%,360px);height:auto;margin:10px auto 26px}
+small{color:var(--tinta-suave)}
