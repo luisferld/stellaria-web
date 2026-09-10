@@ -4,149 +4,53 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Stellaria · poliedros y estelaciones</title>
-<meta name="description" content="Stellaria: un puzle de poliedros y estelaciones para iPhone y iPad. Cada estelación se monta pieza a pieza; la geometría es de verdad, calculada en tu dispositivo.">
-<meta property="og:title" content="Stellaria">
-<meta property="og:description" content="Un puzle de poliedros y estelaciones. Las figuras de The Fifty-Nine Icosahedra, pieza a pieza.">
+<meta name="description" content="Stellaria: un puzle de poliedros y estelaciones para iPhone y iPad. Cada estelación se monta pieza a pieza; la geometría es de verdad.">
 <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-<header class="portada">
-  <div class="banda">
+<main>
+  <div class="cabecera">
     <div>
       <h1>Stellaria</h1>
       <p class="sub">Poliedros y estelaciones · un puzle</p>
     </div>
     <div class="marca" aria-hidden="true"></div>
   </div>
-  <canvas id="obra" class="obra" data-figura="final" aria-label="La estelación final del icosaedro, girando; se puede girar con el dedo"></canvas>
-  <p class="pista">Gírala con el dedo</p>
-  <div class="placa lema">
+
+  <canvas class="solido" id="solido" width="720" height="720" aria-label="Un icosaedro girando, dibujado a tinta"></canvas>
+
+  <div class="placa">
     <p>Un sólido es solo el principio. Prolonga sus caras y aparecen las estelaciones: cada una se monta pieza a pieza, girando y soltando, con la geometría de verdad debajo.</p>
-    <p class="pronto">Próximamente en la App Store · iPhone y iPad</p>
+    <p>Próximamente en la App Store, para iPhone y iPad.</p>
   </div>
-</header>
 
-<main>
-  <section id="juego">
-    <h2>Cómo se juega</h2>
-    <div class="reglas">
-    <div class="placa regla">
-      <h3>La pieza</h3>
-      <p>Cada estelación se construye pieza a pieza. La pieza cae de forma radial hacia la posición que ocupaba en la estelación y su hueco te espera dibujado en el sólido.</p>
-    </div>
-    <div class="placa regla">
-      <h3>Girar la pieza</h3>
-      <p>Cada toque en la pantalla a un lado o a otro hace girar la pieza un cuarto de vuelta. Cuando la pieza esté alineada y coincida con la del hueco, se mueve en la posición correcta.</p>
-    </div>
-    <div class="placa regla">
-      <h3>Lanzar la pieza</h3>
-      <p>Si la ves bien alineada, no esperes: desliza hacia arriba en cualquier parte de la pantalla y la pieza va directa a su hueco. Cada segundo que le ahorras a la caída, puntúa.</p>
-    </div>
-    <div class="placa regla">
-      <h3>El cielo</h3>
-      <p>Una pieza que llega mal alineada, rebota y sigue en el aire. En ese momento entra una pieza más. Después de rebotar, hasta que no alcance su máxima altura no obedecerá a los intentos de girarla. Y así seguirán entrando nuevas piezas hasta que se llene el cielo y acabe el tiempo.</p>
-    </div>
-    <div class="placa regla">
-      <h3>Y algo más</h3>
-      <p>Cada cierto tiempo el juego te regala un rescate: una pieza que se coloca sola cuando las cosas se ponen difíciles. Y aparecerán cada cierto tiempo piezas maestras que nos regalarán piezas colocadas gratis, siempre que las lancemos antes de llegar a su hueco.</p>
-    </div>
-    </div>
-  </section>
+  <p>
+    <a class="hoja" href="soporte/">Soporte</a>
+    <a class="hoja" href="privacidad/">Privacidad</a>
+  </p>
 
-  <section id="poliedros">
-    <h2>Los poliedros</h2>
-    <p class="intro">Veintiocho poliedros, del octaedro al hexecontaedro pentagonal, y doscientas treinta y cuatro estelaciones entre todos. La prueba abre cuatro y diez estelaciones; el juego completo, un solo pago, abre el resto para siempre.</p>
-    <div id="cuadricula" class="cuadricula"></div>
-  </section>
-
-  <section id="estelaciones">
-    <h2>Poliedros y estelaciones</h2>
-    <div class="tarjetas">
-    <article class="tarjeta">
-      <div class="fila-figuras"><canvas class="figura" data-figura="platonicos" data-indice="0" data-fase="0.00" aria-label="Los cinco sólidos platónicos"></canvas><canvas class="figura" data-figura="platonicos" data-indice="1" data-fase="0.70" aria-label="Los cinco sólidos platónicos"></canvas><canvas class="figura" data-figura="platonicos" data-indice="2" data-fase="1.40" aria-label="Los cinco sólidos platónicos"></canvas><canvas class="figura" data-figura="platonicos" data-indice="3" data-fase="2.10" aria-label="Los cinco sólidos platónicos"></canvas><canvas class="figura" data-figura="platonicos" data-indice="4" data-fase="2.80" aria-label="Los cinco sólidos platónicos"></canvas></div>
-      <h3><span class="numero">1</span> Un sólido es solo el principio</h3>
-      <p>Un poliedro es un cuerpo cerrado por caras planas. El cubo, la pirámide, el balón de fútbol antes de inflarlo. Cinco de ellos son especiales: el tetraedro, el cubo, el octaedro, el dodecaedro y el icosaedro. Todas sus caras son iguales, todos sus vértices son iguales, y no hay ningún otro cuerpo en el espacio que cumpla eso. Solo cinco, para siempre, en cualquier universo con tres dimensiones. Platón les asignó los elementos, Euclides cerró con ellos su tratado de geometría y desde entonces no ha habido siglo sin alguien mirándolos otra vez.</p><p>Lo que casi nunca se cuenta es qué pasa si dejas de verlos como objetos terminados y empiezas a tratar sus caras como lo que geométricamente son: trozos recortados de planos infinitos.</p>
-    </article>
-    <article class="tarjeta">
-      <canvas class="figura grande" data-figura="u10-1" data-fase="1.40" aria-label="La stella octangula: la primera estelación del octaedro"></canvas>
-      <h3><span class="numero">2</span> Qué es una estelación</h3>
-      <p>Coge un icosaedro y prolonga el plano de cada una de sus veinte caras más allá del borde. Los planos se cortan entre sí y, al hacerlo, trocean el espacio de alrededor en regiones cerradas. Puntas afiladas junto a las caras, cuñas sobre las aristas, bloques que envuelven a los anteriores en capas cada vez más grandes.</p><p>Una estelación es una selección de esas regiones que vuelve a formar un cuerpo con la misma simetría que el original. Es como si el sólido inicial fuera una semilla y todas las figuras estrelladas que puede generar estuvieran ya contenidas en la orientación de sus caras.</p><p>Kepler fue el primero en tomárselo en serio, en 1619. Dibujó dos de las figuras que salen del dodecaedro y llamó stella octangula a la que sale del octaedro, esa estrella de ocho puntas que es, mirada de otro modo, dos tetraedros atravesados. Poinsot encontró dos más en 1809. Cauchy demostró en 1813 que no había ninguna otra con caras regulares. Cuatro. Se acabó.</p><p>Con el icosaedro la cosa se desbordó.</p>
-    </article>
-    <article class="tarjeta">
-      <canvas class="figura grande" data-figura="final" data-fase="2.10" aria-label="La estelación final del icosaedro"></canvas>
-      <h3><span class="numero">3</span> Cincuenta y nueve icosaedros</h3>
-      <p>En 1938 cuatro autores, Coxeter, Du Val, Flather y Petrie, publicaron un libro pequeño y extraño titulado The Fifty-Nine Icosahedra. Se habían propuesto contar todas las estelaciones del icosaedro que resultaban razonables bajo un criterio concreto, unas reglas de selección que hoy se conocen como reglas de Miller. Salieron cincuenta y nueve.</p><p>Flather construyó las cincuenta y nueve en cartulina, a mano, una por una. El resultado es un catálogo de figuras que van de lo elegante a lo delirante: erizos, estrellas de veinte puntas, cuerpos con huecos, formas que parecen orgánicas y sin embargo salen de veinte planos y nada más.</p><p>Ese catálogo es el material del juego. No una versión libre ni una interpretación artística: las mismas figuras, generadas con el mismo criterio geométrico, calculadas en el dispositivo en el momento de jugar.</p>
-    </article>
-    <article class="tarjeta">
-      <canvas class="figura grande" data-figura="u12-1-explotado" data-fase="2.80" aria-label="Las celdas del cuboctaedro, separadas"></canvas>
-      <h3><span class="numero">4</span> Las celdas son las piezas</h3>
-      <p>Aquí es donde la geometría se convierte sola en rompecabezas.</p><p>Cuando los planos trocean el espacio, cada región cerrada es lo que se llama una celda. Una estelación es exactamente eso: un conjunto de celdas apiladas y encajadas sin holgura. Y esa es la definición de una buena pieza de puzle. Tiene una posición correcta y ninguna otra, tiene una orientación correcta y ninguna otra, y su forma ya te está diciendo dónde va, si sabes mirarla.</p><p>El juego separa las celdas, las lanza hacia fuera a distintas distancias del centro y les da un giro al azar. Tu trabajo es traerlas de vuelta y dejarlas rectas. Al principio te guías por prueba y error. Al cabo de un rato empiezas a anticipar: esta punta es de las largas, va en la capa exterior; esta cuña tiene tres hermanas iguales porque la figura tiene simetría de orden cuatro. Sin haberlo estudiado, has empezado a razonar sobre grupos de simetría.</p>
-    </article>
-    <article class="tarjeta">
-      <canvas class="figura grande" data-figura="u27-5" data-fase="3.50" aria-label="La quinta estelación del icosaedro"></canvas>
-      <h3><span class="numero">5</span> Por qué hacer juegos con matemáticas</h3>
-      <p>La razón más honesta es que las matemáticas producen objetos hermosos y casi nadie llega a verlos. Se quedan detrás de la notación. Alguien que abandonó el álgebra a los quince años no tiene ninguna vía de entrada a un icosaedro estrellado, y sin embargo lo reconocería como bonito en dos segundos si se lo pusieran delante girando.</p><p>Hay razones más concretas:</p><p>Se aprende con las manos antes que con la cabeza. La visión espacial se entrena manipulando cosas, no leyéndolas. Girar una pieza mentalmente, prever si encaja, corregir, volver a probar: eso construye una intuición que después sostiene la geometría formal, la ingeniería, el diseño, la química. Es una de las pocas habilidades cognitivas que mejora de forma medible con la práctica, y los videojuegos espaciales están entre las prácticas que la mejoran.</p><p>No hay barrera de idioma ni de nivel. Un puzle de encajar no pide fórmulas, ni vocabulario, ni haber aprobado nada. Un niño de ocho años y su abuela pueden jugar a lo mismo y perder los dos.</p><p>La belleza es una puerta legítima. Mucha gente que hoy hace matemáticas entró por una imagen, un fractal, un teselado de Escher, una figura de papiroflexia. La curiosidad estética es un motivo tan válido como cualquier otro y es de los pocos que sobreviven a la escuela.</p><p>Y el error no duele. En un juego te equivocas cincuenta veces sin que pase nada. Esa es exactamente la relación con el error que hace falta para las matemáticas y exactamente la que muchas personas no llegaron a tener nunca.</p><p>No pretendemos que esto enseñe geometría. Pretendemos algo más modesto y quizá más difícil: que alguien pase una hora dentro de un objeto matemático y salga pensando que le ha gustado.</p>
-    </article>
-    <article class="tarjeta">
-      <canvas class="figura grande" data-figura="u32-3-alambre" data-fase="4.20" data-alambre="1" aria-label="La tercera estelación del rombicosidodecaedro, al alambre"></canvas>
-      <h3><span class="numero">6</span> Nada de esto está dibujado a mano</h3>
-      <p>Las figuras del juego no son modelos 3D hechos por un diseñador y guardados en un archivo. Se calculan en tu dispositivo mientras juegas, a partir del poliedro de partida y de las mismas reglas geométricas que usaron quienes las catalogaron. Los planos se cortan, las celdas se agrupan, la figura aparece.</p><p>Por eso las puntas están exactamente donde tienen que estar, y por eso cada pieza encaja sin holgura: nadie ha ajustado nada a ojo. Lo que ves girando en la pantalla es geometría resuelta, no una escultura que se le parece.</p>
-    </article>
-    <article class="tarjeta">
-      <canvas class="figura grande" data-figura="d12-2" data-fase="4.90" aria-label="La segunda estelación del dodecaedro rómbico"></canvas>
-      <h3><span class="numero">7</span> Y cuando la termines, imprímela</h3>
-      <p>Cada estelación que completas puede exportarse a un formato 3D abierto. Si tienes acceso a una impresora, la figura que acabas de montar en la pantalla puede acabar encima de tu mesa, en plástico, con sus puntas y todo.</p>
-    </article>
-    </div>
-  </section>
-
-  <section id="cincuenta-y-nueve">
-    <h2>Los cincuenta y nueve icosaedros</h2>
-    <p class="intro">Las cincuenta y nueve estelaciones del icosaedro de Coxeter, Du Val, Flather y Petrie, con su notación, generadas por el motor del juego. Pasa el dedo por encima.</p>
-    <div id="libro" class="libro"></div>
-  </section>
-
-  <footer>
-    <p><a class="hoja" href="soporte/">Soporte</a> <a class="hoja" href="privacidad/">Privacidad</a></p>
-    <p class="pie">© 2026 Luis Fernando Lendrino Díaz · <a href="mailto:bit4qubit@gmail.com">bit4qubit@gmail.com</a><br>
-    El motor de estelaciones es un port del applet «Stellations» de Vladimir Bulatov (1997, licencia BSD). Los poliedros y las estelaciones se calculan; ninguno está dibujado a mano.</p>
-  </footer>
+  <p class="pie">© 2026 Luis Fernando Lendrino Díaz · <a href="mailto:bit4qubit@gmail.com">bit4qubit@gmail.com</a></p>
 </main>
-<script src="tinta.js"></script>
 <script>
-(async function () {
-  const G = 'geometria/';
-  // La obra de la portada y las figuras de las tarjetas.
-  for (const c of document.querySelectorAll('canvas[data-figura]')) {
-    const data = await Tinta.load(G + c.dataset.figura + '.json');
-    const one = Array.isArray(data) ? data[+(c.dataset.indice || 0)] : data;
-    Tinta.mount(c, one, { phase: +(c.dataset.fase || 0), wire: !!c.dataset.alambre, edgeScale: c.dataset.alambre ? 1.2 : 1 });
+// El icosaedro a tinta, girando: la casa dibuja sus sólidos, no los fotografía.
+(function(){
+  const c=document.getElementById('solido'),g=c.getContext('2d');
+  const t=(1+Math.sqrt(5))/2, V=[[-1,t,0],[1,t,0],[-1,-t,0],[1,-t,0],[0,-1,t],[0,1,t],[0,-1,-t],[0,1,-t],[t,0,-1],[t,0,1],[-t,0,-1],[-t,0,1]].map(v=>{const n=Math.hypot(...v);return v.map(x=>x/n)});
+  const F=[[0,11,5],[0,5,1],[0,1,7],[0,7,10],[0,10,11],[1,5,9],[5,11,4],[11,10,2],[10,7,6],[7,1,8],[3,9,4],[3,4,2],[3,2,6],[3,6,8],[3,8,9],[4,9,5],[2,4,11],[6,2,10],[8,6,7],[9,8,1]];
+  const L=[-0.35,0.75,0.55], ln=Math.hypot(...L);
+  function rot(v,a,b){const[x,y,z]=v;const ca=Math.cos(a),sa=Math.sin(a),cb=Math.cos(b),sb=Math.sin(b);const x1=ca*x+sa*z,z1=-sa*x+ca*z;return[x1,cb*y-sb*z1,sb*y+cb*z1]}
+  function draw(time){
+    const a=time*0.0004, b=-0.42, w=c.width, s=w*0.36, cx=w/2, cy=w/2;
+    g.clearRect(0,0,w,w);
+    const P=V.map(v=>rot(v,a,b));
+    const faces=F.map(f=>{const p=f.map(i=>P[i]);const u=[p[1][0]-p[0][0],p[1][1]-p[0][1],p[1][2]-p[0][2]],v=[p[2][0]-p[0][0],p[2][1]-p[0][1],p[2][2]-p[0][2]];let n=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]];const nn=Math.hypot(...n);n=n.map(x=>x/nn);return{p,n,z:(p[0][2]+p[1][2]+p[2][2])/3}}).filter(f=>f.n[2]>0).sort((x,y)=>x.z-y.z);
+    for(const f of faces){const d=Math.max(0,(f.n[0]*L[0]+f.n[1]*L[1]+f.n[2]*L[2])/ln),k=0.25+0.75*d;
+      const r=Math.round(217+(246-217)*k),gg=Math.round(211+(242-211)*k),bb=Math.round(192+(230-192)*k);
+      g.beginPath();f.p.forEach((q,i)=>g[i?'lineTo':'moveTo'](cx+q[0]*s,cy-q[1]*s));g.closePath();
+      g.fillStyle=`rgb(${r},${gg},${bb})`;g.fill();g.strokeStyle='#211F1C';g.lineWidth=w*0.0022;g.stroke();}
+    requestAnimationFrame(draw);
   }
-  // Los veintiocho poliedros de la cuadrícula, con su nombre.
-  const nombres = await Tinta.load(G + 'nombres.json');
-  const cuadricula = document.getElementById('cuadricula');
-  const solidos = await Tinta.load(G + 'poliedros.json');
-  solidos.forEach((s, i) => {
-    const cell = document.createElement('div'); cell.className = 'celda' + (i < 4 ? ' gratis' : '');
-    const c = document.createElement('canvas'); c.className = 'figura';
-    const t = document.createElement('p'); t.textContent = nombres[s.name] || s.name;
-    cell.append(c, t); cuadricula.append(cell);
-    Tinta.mount(c, s, { phase: i * 0.7, drag: false });
-  });
-  // El libro de las 59: quietas, y girando la que se toca.
-  const libro = document.getElementById('libro');
-  const paginas = await Tinta.load(G + '59.json');
-  paginas.forEach((p, i) => {
-    const cell = document.createElement('div'); cell.className = 'pagina';
-    const c = document.createElement('canvas'); c.className = 'figura';
-    const t = document.createElement('p'); t.innerHTML = '<b>' + (i + 1) + '</b> ' + p.notation;
-    cell.append(c, t); libro.append(cell);
-    const fig = new Tinta.Figure(p);
-    const ctx = c.getContext('2d'); let armed = false;
-    const still = () => { const r = c.getBoundingClientRect(), d = Math.min(2, devicePixelRatio || 1); c.width = r.width * d; c.height = r.height * d; ctx.clearRect(0, 0, c.width, c.height); fig.draw(ctx, c.width, c.height, [0, Math.sin(0.55 / 2), 0, Math.cos(0.55 / 2)]); };
-    new IntersectionObserver(es => { if (es[0].isIntersecting && !armed) { armed = true; still(); } }).observe(c);
-    cell.addEventListener('pointerenter', () => { if (!cell.dataset.vivo) { cell.dataset.vivo = '1'; Tinta.mount(c, fig, { phase: 0.55, drag: false }); } }, { once: true });
-  });
+  requestAnimationFrame(draw);
 })();
 </script>
 </body>
