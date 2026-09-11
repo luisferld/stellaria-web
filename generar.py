@@ -11,7 +11,7 @@ import pathlib
 
 RAIZ = pathlib.Path(__file__).resolve().parent
 DOMINIO = "https://stellaria.games"
-CORREO = "bit4qubit@gmail.com"
+CORREO = "stellariajuego@gmail.com"
 IDIOMAS = ["es", "en", "fr", "it", "pt-br", "de", "ja"]
 NOMBRE = {"es": "Español", "en": "English", "fr": "Français", "it": "Italiano",
           "pt-br": "Português (Brasil)", "de": "Deutsch", "ja": "日本語"}
