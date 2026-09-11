@@ -20,3 +20,7 @@ h1{font-size:34px;margin:0 0 6px}h2{font-size:15px;margin:36px 0 10px}
 .pie a{color:var(--tinta-suave)}
 canvas.solido{display:block;width:min(100%,360px);height:auto;margin:10px auto 26px}
 small{color:var(--tinta-suave)}
+.idiomas{margin-top:44px;color:var(--tinta-suave);font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+.idiomas a{color:var(--tinta-suave)}.idiomas span{color:var(--tinta)}
+.lista-idiomas{list-style:none;padding:0;margin:0}.lista-idiomas li{margin:8px 0}
+.lista-idiomas a{font-weight:900;letter-spacing:.1em;text-transform:uppercase}
