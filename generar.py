@@ -19,6 +19,9 @@ LANG = {"pt-br": "pt-BR"}   # el atributo lang y hreflang; los demás, tal cual
 
 # --- Los textos ---------------------------------------------------------
 
+# La página de Stellaria en la App Store (publicada el 21-9-2026).
+TIENDA = "https://apps.apple.com/app/id6811068096"
+
 T = {}
 
 T["es"] = dict(
@@ -28,7 +31,7 @@ T["es"] = dict(
     sub="Poliedros y estelaciones · un puzle",
     canvas="Un icosaedro girando, dibujado a tinta",
     p1="Un sólido es solo el principio. Prolonga sus caras y aparecen las estelaciones: cada una se monta pieza a pieza, girando y soltando, con la geometría de verdad debajo.",
-    p2="Próximamente en la App Store, para iPhone y iPad.",
+    p2=f'<a href="{TIENDA}">Ya en la App Store</a>, para iPhone y iPad.',
     soporte="Soporte", privacidad="Privacidad",
     priv_titulo="Política de privacidad", fecha="10 de septiembre de 2026",
     priv_resumen=("En una frase:", "Stellaria no recoge datos personales. No crea cuentas, no tiene publicidad, no lleva analíticas y no envía nada a servidores propios ni de terceros."),
@@ -59,7 +62,7 @@ T["en"] = dict(
     sub="Polyhedra and stellations · a puzzle",
     canvas="A turning icosahedron, drawn in ink",
     p1="A solid is only the beginning. Extend its faces and the stellations appear: each one is assembled piece by piece, turning and launching, with real geometry underneath.",
-    p2="Coming soon to the App Store, for iPhone and iPad.",
+    p2=f'<a href="{TIENDA}">Now on the App Store</a>, for iPhone and iPad.',
     soporte="Support", privacidad="Privacy",
     priv_titulo="Privacy policy", fecha="September 10, 2026",
     priv_resumen=("In one sentence:", "Stellaria collects no personal data. It creates no accounts, has no advertising, no analytics, and sends nothing to servers of its own or of third parties."),
@@ -90,7 +93,7 @@ T["fr"] = dict(
     sub="Polyèdres et stellations · un puzzle",
     canvas="Un icosaèdre qui tourne, dessiné à l’encre",
     p1="Un solide n’est que le début. Prolongez ses faces et les stellations apparaissent : chacune s’assemble pièce par pièce, en tournant et en lançant, avec la vraie géométrie dessous.",
-    p2="Bientôt sur l’App Store, pour iPhone et iPad.",
+    p2=f'<a href="{TIENDA}">Disponible sur l’App Store</a>, pour iPhone et iPad.',
     soporte="Assistance", privacidad="Confidentialité",
     priv_titulo="Politique de confidentialité", fecha="10 septembre 2026",
     priv_resumen=("En une phrase :", "Stellaria ne collecte aucune donnée personnelle. Pas de compte, pas de publicité, pas de statistiques, et rien n’est envoyé à des serveurs, ni les nôtres ni ceux de tiers."),
@@ -121,7 +124,7 @@ T["it"] = dict(
     sub="Poliedri e stellazioni · un puzzle",
     canvas="Un icosaedro che gira, disegnato a inchiostro",
     p1="Un solido è solo l’inizio. Prolunga le sue facce e compaiono le stellazioni: ognuna si monta pezzo per pezzo, girando e lanciando, con la geometria vera sotto.",
-    p2="Prossimamente sull’App Store, per iPhone e iPad.",
+    p2=f'<a href="{TIENDA}">Disponibile sull’App Store</a>, per iPhone e iPad.',
     soporte="Assistenza", privacidad="Privacy",
     priv_titulo="Informativa sulla privacy", fecha="10 settembre 2026",
     priv_resumen=("In una frase:", "Stellaria non raccoglie dati personali. Non crea account, non ha pubblicità, non usa analitiche e non invia nulla a server propri o di terzi."),
@@ -152,7 +155,7 @@ T["pt-br"] = dict(
     sub="Poliedros e estelações · um quebra-cabeça",
     canvas="Um icosaedro girando, desenhado a tinta",
     p1="Um sólido é só o começo. Prolongue as suas faces e aparecem as estelações: cada uma se monta peça por peça, girando e lançando, com a geometria de verdade por baixo.",
-    p2="Em breve na App Store, para iPhone e iPad.",
+    p2=f'<a href="{TIENDA}">Disponível na App Store</a>, para iPhone e iPad.',
     soporte="Suporte", privacidad="Privacidade",
     priv_titulo="Política de privacidade", fecha="10 de setembro de 2026",
     priv_resumen=("Em uma frase:", "o Stellaria não coleta dados pessoais. Não cria contas, não tem publicidade, não usa análises e não envia nada a servidores próprios nem de terceiros."),
@@ -183,7 +186,7 @@ T["de"] = dict(
     sub="Polyeder und Stellationen · ein Puzzle",
     canvas="Ein sich drehendes Ikosaeder, mit Tinte gezeichnet",
     p1="Ein Körper ist nur der Anfang. Verlängere seine Flächen, und die Stellationen erscheinen: Jede wird Teil für Teil zusammengesetzt, durch Drehen und Werfen, mit echter Geometrie darunter.",
-    p2="Demnächst im App Store, für iPhone und iPad.",
+    p2=f'<a href="{TIENDA}">Jetzt im App Store</a>, für iPhone und iPad.',
     soporte="Support", privacidad="Datenschutz",
     priv_titulo="Datenschutzerklärung", fecha="10. September 2026",
     priv_resumen=("In einem Satz:", "Stellaria sammelt keine personenbezogenen Daten. Es legt keine Konten an, hat keine Werbung, keine Analysen, und sendet nichts an eigene oder fremde Server."),
@@ -214,7 +217,7 @@ T["ja"] = dict(
     sub="多面体と星型 · パズル",
     canvas="回転する正二十面体、インクで描いたもの",
     p1="立体は始まりにすぎません。面を延ばすと星型が現れます。ひとつひとつを、回して投げて、ピースごとに組み立てます。その下にあるのは本物の幾何学です。",
-    p2="近日App Storeにて、iPhoneとiPad向けに公開予定。",
+    p2=f'<a href="{TIENDA}">App Storeで配信中</a>。iPhoneとiPadに対応。',
     soporte="サポート", privacidad="プライバシー",
     priv_titulo="プライバシーポリシー", fecha="2026年9月10日",
     priv_resumen=("ひとことで言うと：", "Stellariaは個人データを収集しません。アカウントを作らず、広告も分析もなく、自社や第三者のサーバーに何も送信しません。"),
