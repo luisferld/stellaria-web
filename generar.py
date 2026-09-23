@@ -472,15 +472,15 @@ PRENSA = {
         largo_t="In three paragraphs",
         largo=[
             "Take a polyhedron and extend its faces beyond its edges: the planes meet again farther out and enclose new solids, star-shaped, one layer after another. These are stellations, and geometry books have shown them as drawings for a century. Stellaria turns them into a puzzle. Each piece is a cell of the stellation; it falls toward its slot, drawn as a ghost on the solid. A tap on the right half of the screen turns the piece a quarter turn clockwise, a tap on the left the other way; a swipe up launches it into place. A misaligned piece bounces and stays in the air while another one comes in; with eight pieces in the air the sky is full. Every second saved scores, and rescues and master pieces help when things get tight. Playing requires no reading. A guided first game (the octahedron's first stellation: eight pieces, no clock, no losing) teaches the controls.",
-            "Nothing in the game is modeled by hand. The 28 polyhedra (Platonic, Archimedean and Catalan solids, prisms, antiprisms, bipyramids and trapezohedra) are generated from their coordinates, and their 234 stellations are computed on the device by a Swift port of the calculation engine of Vladimir Bulatov's «Stellations» applet (version 1.0, 1997, BSD license). The final prize, earned only by completing all 234, is the book of the 59 stellations of the icosahedron counted by Coxeter, Du Val, Flather and Petrie in 1938, which the player can then assemble one by one. Seven cards under «Polyhedra and stellations» explain what a polyhedron, a stellation and a cell are.",
+            "Nothing in the game is modeled by hand. The 28 polyhedra (Platonic, Archimedean and Catalan solids, prisms, antiprisms, bipyramids and trapezohedra) are generated from their coordinates, and their 234 stellations are computed on the device. The final prize, earned only by completing all 234, is the book of the 59 stellations of the icosahedron counted by Coxeter, Du Val, Flather and Petrie in 1938, which the player can then assemble one by one. Seven cards under «Polyhedra and stellations» explain what a polyhedron, a stellation and a cell are.",
             "What you finish, you can hold. Every completed stellation is kept in the Gallery, where it can be turned and zoomed, and exported as an STL file through the system share sheet. The first piece printed from the game was Escher's solid, the first stellation of the rhombic dodecahedron, printed at home on a hobby printer. The look follows El Lissitzky's Prouns (paper, ink, vermilion; backgrounds drawn by code); the sounds and the music are original, synthesized for the game. Stellaria is free with four polyhedra and all their stellations; a single purchase unlocks the other 24. There are no accounts, ads or data collection; Game Center leaderboards and achievements are optional; it works offline. Available in seven languages.",
         ],
         hechos_t="Facts that make a headline",
         hechos=[
-            "<b>234 stellations of 28 polyhedra, computed on the phone, not modeled.</b> The engine is a Swift port of a 1997 Java applet by Vladimir Bulatov; only the calculation core was ported.",
+            "<b>234 stellations of 28 polyhedra, computed on the phone, not modeled.</b> The app generates the polyhedra from their coordinates and works out every stellation on the device.",
             "<b>The 59 icosahedra of 1938 as the final prize.</b> Coxeter, Du Val, Flather and Petrie counted them; here they are earned by completing everything else, then assembled one by one.",
             "<b>Assemble it on screen, print it on your desk.</b> Every finished stellation exports to STL from the Gallery. The first one printed was Escher's solid.",
-            "<b>One developer, no third-party code beyond Apple's frameworks and the ported engine.</b> No accounts, no ads, no data collected; works offline.",
+            "<b>One developer, no third-party SDKs.</b> No accounts, no ads, no data collected; works offline.",
             "<b>Free without a time limit:</b> four polyhedra (ten stellations), the guided game, the Gallery and STL export. One €4.99 purchase for the other 24 polyhedra.",
             "<b>Seven languages at launch</b>, iPhone and iPad, Game Center optional. 6.8 MB.",
             "<b>A visual language after El Lissitzky's Prouns</b>, backgrounds drawn by code, original synthesized sound and music.",
@@ -493,12 +493,7 @@ PRENSA = {
         capturas_pies=["The completed solid", "The stellation opening into its cells", "A piece falling toward its slot", "The polyhedra grid", "The «Polyhedra and stellations» cards", "The book of the 59 icosahedra"],
         pedir="Also available on request: a full play-through video (4 min), a short vertical clip, a GIF, photos of the printed piece and two STL files exported from the game.",
         autor_t="About the developer",
-        autor="Luis Fernando Lendrino Díaz is an independent developer based in Spain. Stellaria is his first release on the App Store. He made the game and the app himself: the game design, the interface, the visual design, the texts and the port of the stellation engine; the sounds and the music were synthesized for the game. He can be reached at {correo} and is available for interviews in Spanish or English.",
-        motor_t="The engine: a note on Vladimir Bulatov's applet",
-        motor=[
-            "Stellaria's stellation engine is a Swift port of the calculation engine of «Stellations», a Java applet by Vladimir Bulatov, version 1.0 (© 1997), whose source code he released under the 2-clause BSD license. Only the calculation core was ported: the applet's user interface, its 3D renderer and the third-party libraries it bundled are not used. His copyright notice and the license text are reproduced verbatim in the app (Settings → About) and in the project's LICENSES.md.",
-            "The polyhedra themselves are generated by the app from their coordinates; no third-party geometry files ship with it. The enumeration and cell notation of the 59 icosahedra follow Coxeter, Du Val, Flather and Petrie, <i>The Fifty-Nine Icosahedra</i> (1938), cited as the reference; no text or plate from the book is reproduced. Vladimir Bulatov is not involved in Stellaria and does not endorse it; the port and the game are the developer's work and responsibility.",
-        ],
+        autor="Luis Fernando Lendrino Díaz is an independent developer based in Spain. Stellaria is his first release on the App Store. He made the game and the app himself: the game design, the interface, the visual design and the texts; the sounds and the music were synthesized for the game. He can be reached at {correo} and is available for interviews in Spanish or English.",
         boiler_t="Boilerplate",
         boiler="Stellaria: Polyhedra Puzzle is a 3D puzzle for iPhone and iPad in which the 234 stellations of 28 polyhedra are computed on the device and assembled piece by piece; every finished stellation exports to STL for 3D printing. Free with four polyhedra, one purchase for the rest; no accounts, no ads, no data collection; seven languages. Made by Luis Fernando Lendrino Díaz, an independent developer in Spain. https://stellaria.games",
         nombres_t="Names and spellings",
@@ -533,15 +528,15 @@ PRENSA = {
         largo_t="En tres párrafos",
         largo=[
             "Toma un poliedro y prolonga sus caras más allá de sus aristas: los planos vuelven a cortarse más lejos y encierran sólidos nuevos, en forma de estrella, capa tras capa. Son las estelaciones, y los libros de geometría las llevan un siglo enseñando como dibujos. Stellaria las convierte en un puzle. Cada pieza es una celda de la estelación; cae hacia su hueco, dibujado como un fantasma sobre el sólido. Un toque en la mitad derecha de la pantalla la gira un cuarto de vuelta en un sentido, un toque en la izquierda en el otro; un deslizamiento hacia arriba la lanza a su sitio. Una pieza mal alineada rebota y se queda en el aire mientras entra otra; con ocho en el aire, el cielo está lleno. Cada segundo que se ahorra puntúa, y los rescates y las piezas maestras ayudan cuando la cosa se pone difícil. No hace falta leer para jugar. Una primera partida guiada (la primera estelación del octaedro: ocho piezas, sin reloj y sin derrota) enseña los mandos.",
-            "Nada en el juego está modelado a mano. Los 28 poliedros (sólidos platónicos, arquimedianos y de Catalan, prismas, antiprismas, bipirámides y trapezoedros) se generan a partir de sus coordenadas, y sus 234 estelaciones las calcula en el dispositivo un port a Swift del motor de cálculo del applet «Stellations» de Vladimir Bulatov (versión 1.0, 1997, licencia BSD). El premio final, que solo se gana completando las 234, es el libro de las 59 estelaciones del icosaedro que contaron Coxeter, Du Val, Flather y Petrie en 1938, y que el jugador puede entonces montar una a una. Siete fichas, en «Poliedros y estelaciones», explican qué es un poliedro, una estelación y una celda.",
+            "Nada en el juego está modelado a mano. Los 28 poliedros (sólidos platónicos, arquimedianos y de Catalan, prismas, antiprismas, bipirámides y trapezoedros) se generan a partir de sus coordenadas, y sus 234 estelaciones se calculan en el dispositivo. El premio final, que solo se gana completando las 234, es el libro de las 59 estelaciones del icosaedro que contaron Coxeter, Du Val, Flather y Petrie en 1938, y que el jugador puede entonces montar una a una. Siete fichas, en «Poliedros y estelaciones», explican qué es un poliedro, una estelación y una celda.",
             "Lo que terminas, lo tienes en la mano. Cada estelación completada se guarda en la Galería, donde se gira y se amplía, y se exporta como fichero STL por la hoja de compartir del sistema. La primera pieza impresa desde el juego fue el sólido de Escher, la primera estelación del dodecaedro rómbico, impresa en casa en una impresora doméstica. La estética sigue los Prouns de El Lissitzky (papel, tinta, bermellón; fondos dibujados por código); los sonidos y la música son originales, sintetizados para el juego. Stellaria es gratis con cuatro poliedros y todas sus estelaciones; una única compra abre los otros 24. No hay cuentas, anuncios ni recogida de datos; las clasificaciones y los logros de Game Center son opcionales; funciona sin conexión. En siete idiomas.",
         ],
         hechos_t="Datos que dan titular",
         hechos=[
-            "<b>234 estelaciones de 28 poliedros, calculadas en el móvil, no modeladas.</b> El motor es un port a Swift de un applet Java de 1997 de Vladimir Bulatov; solo se portó el núcleo de cálculo.",
+            "<b>234 estelaciones de 28 poliedros, calculadas en el móvil, no modeladas.</b> La app genera los poliedros a partir de sus coordenadas y calcula cada estelación en el dispositivo.",
             "<b>Los 59 icosaedros de 1938 como premio final.</b> Los contaron Coxeter, Du Val, Flather y Petrie; aquí se ganan completando todo lo demás, y luego se montan uno a uno.",
             "<b>Lo montas en la pantalla y lo imprimes en la mesa.</b> Cada estelación terminada se exporta a STL desde la Galería. La primera impresa fue el sólido de Escher.",
-            "<b>Una sola persona, sin más código de terceros que los marcos de Apple y el motor portado.</b> Sin cuentas, sin anuncios, sin datos; funciona sin conexión.",
+            "<b>Una sola persona, sin SDK de terceros.</b> Sin cuentas, sin anuncios, sin datos; funciona sin conexión.",
             "<b>Gratis sin límite de tiempo:</b> cuatro poliedros (diez estelaciones), la partida guiada, la Galería y la exportación a STL. Una compra de 4,99 € para los otros 24 poliedros.",
             "<b>Siete idiomas desde el primer día</b>, iPhone y iPad, Game Center opcional. 6,8 MB.",
             "<b>Un lenguaje visual tras los Prouns de El Lissitzky</b>, fondos dibujados por código, sonido y música originales.",
@@ -554,12 +549,7 @@ PRENSA = {
         capturas_pies=["El sólido completo", "La estelación abriéndose en sus celdas", "Una pieza cayendo hacia su hueco", "La cuadrícula de poliedros", "Las fichas de «Poliedros y estelaciones»", "El libro de los 59 icosaedros"],
         pedir="También, a petición: un vídeo de una partida entera (4 min), un clip vertical corto, un GIF, fotos de la pieza impresa y dos ficheros STL exportados desde el juego.",
         autor_t="Sobre el desarrollador",
-        autor="Luis Fernando Lendrino Díaz es desarrollador independiente y vive en España. Stellaria es su primera app en la App Store. Ha hecho el juego y la app él mismo: el diseño del juego, la interfaz, el diseño visual, los textos y el port del motor de estelaciones; los sonidos y la música se sintetizaron para el juego. Se le puede escribir a {correo} y está disponible para entrevistas en español o en inglés.",
-        motor_t="El motor: una nota sobre el applet de Vladimir Bulatov",
-        motor=[
-            "El motor de estelaciones de Stellaria es un port a Swift del motor de cálculo de «Stellations», un applet Java de Vladimir Bulatov, versión 1.0 (© 1997), cuyo código fuente publicó bajo la licencia BSD de 2 cláusulas. Solo se portó el núcleo de cálculo: la interfaz del applet, su renderizador 3D y las bibliotecas de terceros que incluía no se usan. Su aviso de copyright y el texto de la licencia se reproducen literalmente en la app (Ajustes → Acerca de) y en el LICENSES.md del proyecto.",
-            "Los poliedros los genera la app a partir de sus coordenadas; no lleva ficheros de geometría de terceros. La enumeración y la notación de celdas de los 59 icosaedros siguen a Coxeter, Du Val, Flather y Petrie, <i>The Fifty-Nine Icosahedra</i> (1938), citado como referencia; no se reproduce ningún texto ni lámina del libro. Vladimir Bulatov no participa en Stellaria ni la respalda; el port y el juego son obra y responsabilidad del desarrollador.",
-        ],
+        autor="Luis Fernando Lendrino Díaz es desarrollador independiente y vive en España. Stellaria es su primera app en la App Store. Ha hecho el juego y la app él mismo: el diseño del juego, la interfaz, el diseño visual y los textos; los sonidos y la música se sintetizaron para el juego. Se le puede escribir a {correo} y está disponible para entrevistas en español o en inglés.",
         boiler_t="Texto de cierre",
         boiler="Stellaria: puzle de poliedros es un puzle 3D para iPhone y iPad en el que las 234 estelaciones de 28 poliedros se calculan en el dispositivo y se montan pieza a pieza; cada estelación terminada se exporta a STL para imprimirla en 3D. Gratis con cuatro poliedros, una compra para el resto; sin cuentas, sin anuncios, sin recogida de datos; siete idiomas. Hecho por Luis Fernando Lendrino Díaz, desarrollador independiente, en España. https://stellaria.games",
         nombres_t="Nombres y grafías",
@@ -630,9 +620,6 @@ def prensa(idioma):
 
   <h2>{t["autor_t"]}</h2>
   <p>{correo(t["autor"])}</p>
-
-  <h2>{t["motor_t"]}</h2>
-{parrafos(t["motor"])}
 
   <h2>{t["boiler_t"]}</h2>
   <p>{t["boiler"]}</p>
