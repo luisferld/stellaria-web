@@ -15,6 +15,11 @@ soporte, con sus rutas en cada idioma.
 | Deutsch | `/de/` | `/de/datenschutz/` | `/de/support/` |
 | 日本語 | `/ja/` | `/ja/privacy/` | `/ja/support/` |
 
+Y el **kit de prensa**, solo en dos idiomas: `/press/` (inglés) y
+`/es/prensa/` (español), con el icono, las 24 capturas de la tienda y
+un ZIP con todo en `/press/` (unos 38 MB en el repo; los vídeos y las
+fotos van por enlace externo, no aquí).
+
 La raíz (`/`) reenvía al idioma del navegador (inglés si no es uno de
 los siete), y `/privacidad/` y `/soporte/`, las rutas de la primera
 versión, reenvían al español. Cada página lleva el selector de idiomas

@@ -24,3 +24,12 @@ small{color:var(--tinta-suave)}
 .idiomas a{color:var(--tinta-suave)}.idiomas span{color:var(--tinta)}
 .lista-idiomas{list-style:none;padding:0;margin:0}.lista-idiomas li{margin:8px 0}
 .lista-idiomas a{font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+/* El kit de prensa. */
+.prensa{max-width:820px}
+.datos{border-collapse:collapse;width:100%;font-size:15px}
+.datos th,.datos td{text-align:left;vertical-align:top;padding:8px 10px;border-top:1px solid var(--tinta)}
+.datos th{white-space:nowrap;text-transform:uppercase;letter-spacing:.06em;font-size:12px;width:140px}
+.capturas{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin:14px 0}
+.capturas figure{margin:0}.capturas img{width:100%;height:auto;border:1px solid var(--tinta);background:var(--hoja)}
+.capturas figcaption{font-size:12px;color:var(--tinta-suave);margin-top:4px}
+.icono{vertical-align:middle;border-radius:22px;margin-right:8px}
