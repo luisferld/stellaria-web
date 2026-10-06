@@ -20,7 +20,10 @@ LANG = {"pt-br": "pt-BR"}   # el atributo lang y hreflang; los demás, tal cual
 # --- Los textos ---------------------------------------------------------
 
 # La página de Stellaria en la App Store (publicada el 21-9-2026).
-TIENDA = "https://apps.apple.com/app/id6811068096"
+# Enlaces de campaña de App Store Connect (Analytics → Campaigns): el
+# mismo producto, con la etiqueta «ct» del canal; «pt» identifica la cuenta.
+TIENDA = "https://apps.apple.com/app/apple-store/id6811068096?pt=129444067&ct=web&mt=8"
+TIENDA_PRENSA = "https://apps.apple.com/app/apple-store/id6811068096?pt=129444067&ct=press&mt=8"
 
 T = {}
 
@@ -464,7 +467,7 @@ PRENSA = {
             ("Game Center", "Optional: leaderboards and achievements"),
             ("Privacy", "App Privacy label «Data Not Collected». No accounts, no ads, no analytics, no third-party SDKs; works offline."),
             ("Built with", "Swift, SwiftUI, RealityKit, StoreKit 2, GameKit"),
-            ("App Store", '<a href="https://apps.apple.com/app/id6811068096">apps.apple.com/app/id6811068096</a>'),
+            ("App Store", f'<a href="{TIENDA_PRENSA}">apps.apple.com/app/id6811068096</a>'),
             ("Website", '<a href="https://stellaria.games">stellaria.games</a> (seven languages) · <a href="/en/privacy/">Privacy policy</a>'),
         ],
         corto_t="In one paragraph",
@@ -520,7 +523,7 @@ PRENSA = {
             ("Game Center", "Opcional: clasificaciones y logros"),
             ("Privacidad", "Etiqueta de privacidad «No se recogen datos». Sin cuentas, sin anuncios, sin analítica, sin SDK de terceros; funciona sin conexión."),
             ("Hecho con", "Swift, SwiftUI, RealityKit, StoreKit 2, GameKit"),
-            ("App Store", '<a href="https://apps.apple.com/app/id6811068096">apps.apple.com/app/id6811068096</a>'),
+            ("App Store", f'<a href="{TIENDA_PRENSA}">apps.apple.com/app/id6811068096</a>'),
             ("Web", '<a href="https://stellaria.games">stellaria.games</a> (siete idiomas) · <a href="/es/privacidad/">Política de privacidad</a>'),
         ],
         corto_t="En un párrafo",
