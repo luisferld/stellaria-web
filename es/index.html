@@ -4,7 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Stellaria · poliedros y estelaciones</title>
-<meta name="description" content="Stellaria: un puzle de poliedros y estelaciones para iPhone y iPad. Cada estelación se monta pieza a pieza; la geometría es de verdad.">
+<meta name="description" content="Stellaria: un puzle de poliedros y estelaciones para iPhone, iPad y Mac. Cada estelación se monta pieza a pieza; la geometría es de verdad.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://stellaria.games/es/">
+<meta property="og:title" content="Stellaria · Un puzle de poliedros">
+<meta property="og:description" content="Gira cada pieza con un toque, lánzala a su hueco y cierra la estrella antes de que se llene el cielo. Cada estrella es una estelación de un poliedro, calculada en el dispositivo: la geometría es de verdad.">
+<meta property="og:image" content="https://stellaria.games/media/portada.jpg">
+<meta property="og:image:width" content="720">
+<meta property="og:image:height" content="1280">
+<meta property="og:video" content="https://stellaria.games/media/portada.mp4">
+<meta property="og:video:type" content="video/mp4">
+<meta property="og:video:width" content="720">
+<meta property="og:video:height" content="1280">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://stellaria.games/es/">
 <link rel="alternate" hreflang="es" href="https://stellaria.games/es/">
 <link rel="alternate" hreflang="en" href="https://stellaria.games/en/">
@@ -17,20 +29,35 @@
 <link rel="stylesheet" href="/estilo.css">
 </head>
 <body>
-<main>
+<main class="portada">
+  <div class="escena">
   <div class="cabecera">
     <div>
       <h1>Stellaria</h1>
-      <p class="sub">Poliedros y estelaciones · un puzle</p>
+      <p class="sub">Un puzle de poliedros</p>
     </div>
     <div class="marca" aria-hidden="true"></div>
   </div>
 
-  <canvas class="solido" id="solido" width="720" height="720" aria-label="Un icosaedro girando, dibujado a tinta"></canvas>
+  <div class="pantalla">
+    <video autoplay muted loop playsinline preload="metadata" poster="/media/portada.jpg" width="720" height="1280" aria-label="Una estrella terminada girando en la Galería de Stellaria">
+      <source src="/media/portada.mp4" type="video/mp4">
+      <source src="/media/portada.webm" type="video/webm">
+    </video>
+  </div>
 
-  <div class="placa">
-    <p>Un sólido es solo el principio. Prolonga sus caras y aparecen las estelaciones: cada una se monta pieza a pieza, girando y soltando, con la geometría de verdad debajo.</p>
-    <p><a href="https://apps.apple.com/app/apple-store/id6811068096?pt=129444067&ct=web&mt=8">Ya en la App Store</a>, para iPhone y iPad.</p>
+  <p class="tiendas">
+    <a class="boton" href="https://apps.apple.com/app/apple-store/id6811068096?pt=129444067&ct=web&mt=8">App Store · iPhone y iPad</a>
+    <a class="boton" href="https://apps.apple.com/app/apple-store/id6819857964?pt=129444067&ct=web&mt=12">Mac App Store</a>
+  </p>
+
+  <p class="frase">Gira cada pieza con un toque, lánzala a su hueco y cierra la estrella antes de que se llene el cielo. Cada estrella es una estelación de un poliedro, calculada en el dispositivo: la geometría es de verdad.</p>
+
+  <ul class="tres">
+    <li>28 poliedros · 234 estelaciones · 7 idiomas</li>
+    <li>Gratis con cuatro poliedros, una sola compra para el resto · sin anuncios, sin cuentas, sin datos</li>
+    <li>Hecho por una sola persona, en España</li>
+  </ul>
   </div>
 
   <p>
@@ -41,6 +68,5 @@
   <p class="idiomas"><span>Español</span> · <a href="/en/" hreflang="en" lang="en">English</a> · <a href="/fr/" hreflang="fr" lang="fr">Français</a> · <a href="/it/" hreflang="it" lang="it">Italiano</a> · <a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="/de/" hreflang="de" lang="de">Deutsch</a> · <a href="/ja/" hreflang="ja" lang="ja">日本語</a></p>
   <p class="pie">© 2026 Luis Fernando Lendrino Díaz</p>
 </main>
-<script src="/solido.js"></script>
 </body>
 </html>

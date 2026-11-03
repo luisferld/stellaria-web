@@ -4,7 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Stellaria · poliedri e stellazioni</title>
-<meta name="description" content="Stellaria: un puzzle di poliedri e stellazioni per iPhone e iPad. Ogni stellazione si monta pezzo per pezzo; la geometria è vera.">
+<meta name="description" content="Stellaria: un puzzle di poliedri e stellazioni per iPhone, iPad e Mac. Ogni stellazione si monta pezzo per pezzo; la geometria è vera.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://stellaria.games/it/">
+<meta property="og:title" content="Stellaria · Un puzzle di poliedri">
+<meta property="og:description" content="Ruota ogni pezzo con un tocco, lancialo nel suo incastro e chiudi la stella prima che il cielo si riempia. Ogni stella è una stellazione di un poliedro, calcolata sul dispositivo: la geometria è vera.">
+<meta property="og:image" content="https://stellaria.games/media/portada.jpg">
+<meta property="og:image:width" content="720">
+<meta property="og:image:height" content="1280">
+<meta property="og:video" content="https://stellaria.games/media/portada.mp4">
+<meta property="og:video:type" content="video/mp4">
+<meta property="og:video:width" content="720">
+<meta property="og:video:height" content="1280">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://stellaria.games/it/">
 <link rel="alternate" hreflang="es" href="https://stellaria.games/es/">
 <link rel="alternate" hreflang="en" href="https://stellaria.games/en/">
@@ -17,20 +29,35 @@
 <link rel="stylesheet" href="/estilo.css">
 </head>
 <body>
-<main>
+<main class="portada">
+  <div class="escena">
   <div class="cabecera">
     <div>
       <h1>Stellaria</h1>
-      <p class="sub">Poliedri e stellazioni · un puzzle</p>
+      <p class="sub">Un puzzle di poliedri</p>
     </div>
     <div class="marca" aria-hidden="true"></div>
   </div>
 
-  <canvas class="solido" id="solido" width="720" height="720" aria-label="Un icosaedro che gira, disegnato a inchiostro"></canvas>
+  <div class="pantalla">
+    <video autoplay muted loop playsinline preload="metadata" poster="/media/portada.jpg" width="720" height="1280" aria-label="Una stella finita che gira nella Galleria di Stellaria">
+      <source src="/media/portada.mp4" type="video/mp4">
+      <source src="/media/portada.webm" type="video/webm">
+    </video>
+  </div>
 
-  <div class="placa">
-    <p>Un solido è solo l’inizio. Prolunga le sue facce e compaiono le stellazioni: ognuna si monta pezzo per pezzo, girando e lanciando, con la geometria vera sotto.</p>
-    <p><a href="https://apps.apple.com/app/apple-store/id6811068096?pt=129444067&ct=web&mt=8">Disponibile sull’App Store</a>, per iPhone e iPad.</p>
+  <p class="tiendas">
+    <a class="boton" href="https://apps.apple.com/app/apple-store/id6811068096?pt=129444067&ct=web&mt=8">App Store · iPhone e iPad</a>
+    <a class="boton" href="https://apps.apple.com/app/apple-store/id6819857964?pt=129444067&ct=web&mt=12">Mac App Store</a>
+  </p>
+
+  <p class="frase">Ruota ogni pezzo con un tocco, lancialo nel suo incastro e chiudi la stella prima che il cielo si riempia. Ogni stella è una stellazione di un poliedro, calcolata sul dispositivo: la geometria è vera.</p>
+
+  <ul class="tres">
+    <li>28 poliedri · 234 stellazioni · 7 lingue</li>
+    <li>Gratis con quattro poliedri, un solo acquisto per il resto · niente pubblicità, niente account, nessun dato raccolto</li>
+    <li>Fatto da un solo sviluppatore, in Spagna</li>
+  </ul>
   </div>
 
   <p>
@@ -41,6 +68,5 @@
   <p class="idiomas"><a href="/es/" hreflang="es" lang="es">Español</a> · <a href="/en/" hreflang="en" lang="en">English</a> · <a href="/fr/" hreflang="fr" lang="fr">Français</a> · <span>Italiano</span> · <a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="/de/" hreflang="de" lang="de">Deutsch</a> · <a href="/ja/" hreflang="ja" lang="ja">日本語</a></p>
   <p class="pie">© 2026 Luis Fernando Lendrino Díaz</p>
 </main>
-<script src="/solido.js"></script>
 </body>
 </html>

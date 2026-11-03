@@ -24,17 +24,25 @@ LANG = {"pt-br": "pt-BR"}   # el atributo lang y hreflang; los demás, tal cual
 # mismo producto, con la etiqueta «ct» del canal; «pt» identifica la cuenta.
 TIENDA = "https://apps.apple.com/app/apple-store/id6811068096?pt=129444067&ct=web&mt=8"
 TIENDA_PRENSA = "https://apps.apple.com/app/apple-store/id6811068096?pt=129444067&ct=press&mt=8"
+# La de la Mac App Store (publicada el 2-11-2026), con la misma campaña «web».
+TIENDA_MAC = "https://apps.apple.com/app/apple-store/id6819857964?pt=129444067&ct=web&mt=12"
 
 T = {}
 
 T["es"] = dict(
     ruta_privacidad="privacidad", ruta_soporte="soporte",
     titulo="Stellaria · poliedros y estelaciones",
-    descripcion="Stellaria: un puzle de poliedros y estelaciones para iPhone y iPad. Cada estelación se monta pieza a pieza; la geometría es de verdad.",
-    sub="Poliedros y estelaciones · un puzle",
-    canvas="Un icosaedro girando, dibujado a tinta",
-    p1="Un sólido es solo el principio. Prolonga sus caras y aparecen las estelaciones: cada una se monta pieza a pieza, girando y soltando, con la geometría de verdad debajo.",
-    p2=f'<a href="{TIENDA}">Ya en la App Store</a>, para iPhone y iPad.',
+    descripcion="Stellaria: un puzle de poliedros y estelaciones para iPhone, iPad y Mac. Cada estelación se monta pieza a pieza; la geometría es de verdad.",
+    sub="Un puzle de poliedros",
+    video="Una estrella terminada girando en la Galería de Stellaria",
+    p1="Gira cada pieza con un toque, lánzala a su hueco y cierra la estrella antes de que se llene el cielo.",
+    p2="Cada estrella es una estelación de un poliedro, calculada en el dispositivo: la geometría es de verdad.",
+    boton_ios="App Store · iPhone y iPad",
+    datos=[
+        "28 poliedros · 234 estelaciones · 7 idiomas",
+        "Gratis con cuatro poliedros, una sola compra para el resto · sin anuncios, sin cuentas, sin datos",
+        "Hecho por una sola persona, en España",
+    ],
     soporte="Soporte", privacidad="Privacidad",
     priv_titulo="Política de privacidad", fecha="10 de septiembre de 2026",
     priv_resumen=("En una frase:", "Stellaria no recoge datos personales. No crea cuentas, no tiene publicidad, no lleva analíticas y no envía nada a servidores propios ni de terceros."),
@@ -61,11 +69,17 @@ T["es"] = dict(
 T["en"] = dict(
     ruta_privacidad="privacy", ruta_soporte="support",
     titulo="Stellaria · polyhedra and stellations",
-    descripcion="Stellaria: a puzzle of polyhedra and stellations for iPhone and iPad. Every stellation is assembled piece by piece; the geometry is real.",
-    sub="Polyhedra and stellations · a puzzle",
-    canvas="A turning icosahedron, drawn in ink",
-    p1="A solid is only the beginning. Extend its faces and the stellations appear: each one is assembled piece by piece, turning and launching, with real geometry underneath.",
-    p2=f'<a href="{TIENDA}">Now on the App Store</a>, for iPhone and iPad.',
+    descripcion="Stellaria: a puzzle of polyhedra and stellations for iPhone, iPad and Mac. Every stellation is assembled piece by piece; the geometry is real.",
+    sub="A polyhedra puzzle",
+    video="A finished star turning in the Stellaria Gallery",
+    p1="Turn each piece with a tap, launch it into its slot and close the star before the sky fills up.",
+    p2="Every star is a stellation of a polyhedron, computed on the device: the geometry is real.",
+    boton_ios="App Store · iPhone and iPad",
+    datos=[
+        "28 polyhedra · 234 stellations · 7 languages",
+        "Free with four polyhedra, one purchase for the rest · no ads, no accounts, no data collection",
+        "Made by one developer in Spain",
+    ],
     soporte="Support", privacidad="Privacy",
     priv_titulo="Privacy policy", fecha="September 10, 2026",
     priv_resumen=("In one sentence:", "Stellaria collects no personal data. It creates no accounts, has no advertising, no analytics, and sends nothing to servers of its own or of third parties."),
@@ -92,11 +106,17 @@ T["en"] = dict(
 T["fr"] = dict(
     ruta_privacidad="confidentialite", ruta_soporte="assistance",
     titulo="Stellaria · polyèdres et stellations",
-    descripcion="Stellaria : un puzzle de polyèdres et de stellations pour iPhone et iPad. Chaque stellation s’assemble pièce par pièce ; la géométrie est réelle.",
-    sub="Polyèdres et stellations · un puzzle",
-    canvas="Un icosaèdre qui tourne, dessiné à l’encre",
-    p1="Un solide n’est que le début. Prolongez ses faces et les stellations apparaissent : chacune s’assemble pièce par pièce, en tournant et en lançant, avec la vraie géométrie dessous.",
-    p2=f'<a href="{TIENDA}">Disponible sur l’App Store</a>, pour iPhone et iPad.',
+    descripcion="Stellaria : un puzzle de polyèdres et de stellations pour iPhone, iPad et Mac. Chaque stellation s’assemble pièce par pièce ; la géométrie est réelle.",
+    sub="Un puzzle de polyèdres",
+    video="Une étoile terminée qui tourne dans la Galerie de Stellaria",
+    p1="Tournez chaque pièce d’un toucher, lancez-la dans son logement et refermez l’étoile avant que le ciel ne soit plein.",
+    p2="Chaque étoile est une stellation d’un polyèdre, calculée sur l’appareil : la géométrie est réelle.",
+    boton_ios="App Store · iPhone et iPad",
+    datos=[
+        "28 polyèdres · 234 stellations · 7 langues",
+        "Gratuit avec quatre polyèdres, un seul achat pour le reste · sans publicité, sans compte, sans collecte de données",
+        "Fait par un seul développeur, en Espagne",
+    ],
     soporte="Assistance", privacidad="Confidentialité",
     priv_titulo="Politique de confidentialité", fecha="10 septembre 2026",
     priv_resumen=("En une phrase :", "Stellaria ne collecte aucune donnée personnelle. Pas de compte, pas de publicité, pas de statistiques, et rien n’est envoyé à des serveurs, ni les nôtres ni ceux de tiers."),
@@ -123,11 +143,17 @@ T["fr"] = dict(
 T["it"] = dict(
     ruta_privacidad="privacy", ruta_soporte="assistenza",
     titulo="Stellaria · poliedri e stellazioni",
-    descripcion="Stellaria: un puzzle di poliedri e stellazioni per iPhone e iPad. Ogni stellazione si monta pezzo per pezzo; la geometria è vera.",
-    sub="Poliedri e stellazioni · un puzzle",
-    canvas="Un icosaedro che gira, disegnato a inchiostro",
-    p1="Un solido è solo l’inizio. Prolunga le sue facce e compaiono le stellazioni: ognuna si monta pezzo per pezzo, girando e lanciando, con la geometria vera sotto.",
-    p2=f'<a href="{TIENDA}">Disponibile sull’App Store</a>, per iPhone e iPad.',
+    descripcion="Stellaria: un puzzle di poliedri e stellazioni per iPhone, iPad e Mac. Ogni stellazione si monta pezzo per pezzo; la geometria è vera.",
+    sub="Un puzzle di poliedri",
+    video="Una stella finita che gira nella Galleria di Stellaria",
+    p1="Ruota ogni pezzo con un tocco, lancialo nel suo incastro e chiudi la stella prima che il cielo si riempia.",
+    p2="Ogni stella è una stellazione di un poliedro, calcolata sul dispositivo: la geometria è vera.",
+    boton_ios="App Store · iPhone e iPad",
+    datos=[
+        "28 poliedri · 234 stellazioni · 7 lingue",
+        "Gratis con quattro poliedri, un solo acquisto per il resto · niente pubblicità, niente account, nessun dato raccolto",
+        "Fatto da un solo sviluppatore, in Spagna",
+    ],
     soporte="Assistenza", privacidad="Privacy",
     priv_titulo="Informativa sulla privacy", fecha="10 settembre 2026",
     priv_resumen=("In una frase:", "Stellaria non raccoglie dati personali. Non crea account, non ha pubblicità, non usa analitiche e non invia nulla a server propri o di terzi."),
@@ -154,11 +180,17 @@ T["it"] = dict(
 T["pt-br"] = dict(
     ruta_privacidad="privacidade", ruta_soporte="suporte",
     titulo="Stellaria · poliedros e estelações",
-    descripcion="Stellaria: um quebra-cabeça de poliedros e estelações para iPhone e iPad. Cada estelação se monta peça por peça; a geometria é de verdade.",
-    sub="Poliedros e estelações · um quebra-cabeça",
-    canvas="Um icosaedro girando, desenhado a tinta",
-    p1="Um sólido é só o começo. Prolongue as suas faces e aparecem as estelações: cada uma se monta peça por peça, girando e lançando, com a geometria de verdade por baixo.",
-    p2=f'<a href="{TIENDA}">Disponível na App Store</a>, para iPhone e iPad.',
+    descripcion="Stellaria: um quebra-cabeça de poliedros e estelações para iPhone, iPad e Mac. Cada estelação se monta peça por peça; a geometria é de verdade.",
+    sub="Um quebra-cabeça de poliedros",
+    video="Uma estrela concluída girando na Galeria do Stellaria",
+    p1="Gire cada peça com um toque, lance-a no seu encaixe e feche a estrela antes que o céu se encha.",
+    p2="Cada estrela é uma estelação de um poliedro, calculada no dispositivo: a geometria é de verdade.",
+    boton_ios="App Store · iPhone e iPad",
+    datos=[
+        "28 poliedros · 234 estelações · 7 idiomas",
+        "Grátis com quatro poliedros, uma única compra para o resto · sem anúncios, sem contas, sem coleta de dados",
+        "Feito por um único desenvolvedor, na Espanha",
+    ],
     soporte="Suporte", privacidad="Privacidade",
     priv_titulo="Política de privacidade", fecha="10 de setembro de 2026",
     priv_resumen=("Em uma frase:", "o Stellaria não coleta dados pessoais. Não cria contas, não tem publicidade, não usa análises e não envia nada a servidores próprios nem de terceiros."),
@@ -185,11 +217,17 @@ T["pt-br"] = dict(
 T["de"] = dict(
     ruta_privacidad="datenschutz", ruta_soporte="support",
     titulo="Stellaria · Polyeder und Stellationen",
-    descripcion="Stellaria: ein Puzzle aus Polyedern und Stellationen für iPhone und iPad. Jede Stellation wird Teil für Teil zusammengesetzt; die Geometrie ist echt.",
-    sub="Polyeder und Stellationen · ein Puzzle",
-    canvas="Ein sich drehendes Ikosaeder, mit Tinte gezeichnet",
-    p1="Ein Körper ist nur der Anfang. Verlängere seine Flächen, und die Stellationen erscheinen: Jede wird Teil für Teil zusammengesetzt, durch Drehen und Werfen, mit echter Geometrie darunter.",
-    p2=f'<a href="{TIENDA}">Jetzt im App Store</a>, für iPhone und iPad.',
+    descripcion="Stellaria: ein Puzzle aus Polyedern und Stellationen für iPhone, iPad und Mac. Jede Stellation wird Teil für Teil zusammengesetzt; die Geometrie ist echt.",
+    sub="Ein Polyeder-Puzzle",
+    video="Ein fertiger Stern, der sich in der Galerie von Stellaria dreht",
+    p1="Dreh jedes Teil mit einem Tippen, wirf es in seine Lücke und schließ den Stern, bevor sich der Himmel füllt.",
+    p2="Jeder Stern ist eine Stellation eines Polyeders, auf dem Gerät berechnet: Die Geometrie ist echt.",
+    boton_ios="App Store · iPhone und iPad",
+    datos=[
+        "28 Polyeder · 234 Stellationen · 7 Sprachen",
+        "Kostenlos mit vier Polyedern, ein einziger Kauf für den Rest · keine Werbung, keine Konten, keine Datenerhebung",
+        "Von einem einzigen Entwickler, in Spanien",
+    ],
     soporte="Support", privacidad="Datenschutz",
     priv_titulo="Datenschutzerklärung", fecha="10. September 2026",
     priv_resumen=("In einem Satz:", "Stellaria sammelt keine personenbezogenen Daten. Es legt keine Konten an, hat keine Werbung, keine Analysen, und sendet nichts an eigene oder fremde Server."),
@@ -216,11 +254,17 @@ T["de"] = dict(
 T["ja"] = dict(
     ruta_privacidad="privacy", ruta_soporte="support",
     titulo="Stellaria · 多面体と星型",
-    descripcion="Stellaria：iPhoneとiPadのための、多面体と星型のパズル。星型はピースをひとつずつ組み立てます。幾何学は本物です。",
-    sub="多面体と星型 · パズル",
-    canvas="回転する正二十面体、インクで描いたもの",
-    p1="立体は始まりにすぎません。面を延ばすと星型が現れます。ひとつひとつを、回して投げて、ピースごとに組み立てます。その下にあるのは本物の幾何学です。",
-    p2=f'<a href="{TIENDA}">App Storeで配信中</a>。iPhoneとiPadに対応。',
+    descripcion="Stellaria：iPhone、iPad、Macのための、多面体と星型のパズル。星型はピースをひとつずつ組み立てます。幾何学は本物です。",
+    sub="多面体パズル",
+    video="Stellariaのギャラリーで回転する完成した星",
+    p1="タップでピースを回し、スワイプで穴へ投げ入れて、空がいっぱいになる前に星を完成させよう。",
+    p2="どの星も多面体の星型で、端末上で計算されています。幾何学は本物です。",
+    boton_ios="App Store · iPhone・iPad",
+    datos=[
+        "28の多面体 · 234の星型 · 7言語",
+        "4つの多面体は無料、残りは一度の購入で · 広告なし、アカウントなし、データ収集なし",
+        "スペインの開発者がひとりで制作",
+    ],
     soporte="サポート", privacidad="プライバシー",
     priv_titulo="プライバシーポリシー", fecha="2026年9月10日",
     priv_resumen=("ひとことで言うと：", "Stellariaは個人データを収集しません。アカウントを作らず、広告も分析もなく、自社や第三者のサーバーに何も送信しません。"),
@@ -260,10 +304,27 @@ def lang(idioma):
     return LANG.get(idioma, idioma)
 
 
-def cabeza(idioma, pagina, titulo, descripcion=None):
+def cabeza(idioma, pagina, titulo, descripcion=None, compartir=None, clase=None):
+    """compartir: (título, descripción) para las etiquetas og: y twitter:
+    de la portada, con el póster y el vídeo del bucle."""
     alternos = "\n".join(
         f'<link rel="alternate" hreflang="{lang(i)}" href="{DOMINIO}{ruta(i, pagina)}">' for i in IDIOMAS)
     desc = f'\n<meta name="description" content="{descripcion}">' if descripcion else ""
+    if compartir:
+        og_titulo, og_desc = compartir
+        desc += f"""
+<meta property="og:type" content="website">
+<meta property="og:url" content="{DOMINIO}{ruta(idioma, pagina)}">
+<meta property="og:title" content="{og_titulo}">
+<meta property="og:description" content="{og_desc}">
+<meta property="og:image" content="{DOMINIO}/media/portada.jpg">
+<meta property="og:image:width" content="720">
+<meta property="og:image:height" content="1280">
+<meta property="og:video" content="{DOMINIO}/media/portada.mp4">
+<meta property="og:video:type" content="video/mp4">
+<meta property="og:video:width" content="720">
+<meta property="og:video:height" content="1280">
+<meta name="twitter:card" content="summary_large_image">"""
     return f"""<!doctype html>
 <html lang="{lang(idioma)}">
 <head>
@@ -276,7 +337,7 @@ def cabeza(idioma, pagina, titulo, descripcion=None):
 <link rel="stylesheet" href="/estilo.css">
 </head>
 <body>
-<main>"""
+<main{f' class="{clase}"' if clase else ""}>"""
 
 
 def idiomas(idioma, pagina):
@@ -293,8 +354,13 @@ def correo(texto, asunto=False):
 
 
 def portada(idioma):
+    """Lo primero, el juego en movimiento: el bucle de la estrella girando
+    (media/portada.*), el nombre, dos frases, las dos tiendas y tres datos.
+    En móvil, una columna; en pantalla ancha, el vídeo a un lado (estilo.css)."""
     t = T[idioma]
-    return f"""{cabeza(idioma, "", t["titulo"], t["descripcion"])}
+    datos = "\n".join(f"    <li>{d}</li>" for d in t["datos"])
+    return f"""{cabeza(idioma, "", t["titulo"], t["descripcion"], (f'Stellaria · {t["sub"]}', f'{t["p1"]} {t["p2"]}'), "portada")}
+  <div class="escena">
   <div class="cabecera">
     <div>
       <h1>Stellaria</h1>
@@ -303,11 +369,23 @@ def portada(idioma):
 {MARCA}
   </div>
 
-  <canvas class="solido" id="solido" width="720" height="720" aria-label="{t["canvas"]}"></canvas>
+  <div class="pantalla">
+    <video autoplay muted loop playsinline preload="metadata" poster="/media/portada.jpg" width="720" height="1280" aria-label="{t["video"]}">
+      <source src="/media/portada.mp4" type="video/mp4">
+      <source src="/media/portada.webm" type="video/webm">
+    </video>
+  </div>
 
-  <div class="placa">
-    <p>{t["p1"]}</p>
-    <p>{t["p2"]}</p>
+  <p class="tiendas">
+    <a class="boton" href="{TIENDA}">{t["boton_ios"]}</a>
+    <a class="boton" href="{TIENDA_MAC}">Mac App Store</a>
+  </p>
+
+  <p class="frase">{t["p1"]} {t["p2"]}</p>
+
+  <ul class="tres">
+{datos}
+  </ul>
   </div>
 
   <p>
@@ -318,7 +396,6 @@ def portada(idioma):
 {idiomas(idioma, "")}
   <p class="pie">© 2026 Luis Fernando Lendrino Díaz</p>
 </main>
-<script src="/solido.js"></script>
 </body>
 </html>
 """

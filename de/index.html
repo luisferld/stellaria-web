@@ -4,7 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Stellaria · Polyeder und Stellationen</title>
-<meta name="description" content="Stellaria: ein Puzzle aus Polyedern und Stellationen für iPhone und iPad. Jede Stellation wird Teil für Teil zusammengesetzt; die Geometrie ist echt.">
+<meta name="description" content="Stellaria: ein Puzzle aus Polyedern und Stellationen für iPhone, iPad und Mac. Jede Stellation wird Teil für Teil zusammengesetzt; die Geometrie ist echt.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://stellaria.games/de/">
+<meta property="og:title" content="Stellaria · Ein Polyeder-Puzzle">
+<meta property="og:description" content="Dreh jedes Teil mit einem Tippen, wirf es in seine Lücke und schließ den Stern, bevor sich der Himmel füllt. Jeder Stern ist eine Stellation eines Polyeders, auf dem Gerät berechnet: Die Geometrie ist echt.">
+<meta property="og:image" content="https://stellaria.games/media/portada.jpg">
+<meta property="og:image:width" content="720">
+<meta property="og:image:height" content="1280">
+<meta property="og:video" content="https://stellaria.games/media/portada.mp4">
+<meta property="og:video:type" content="video/mp4">
+<meta property="og:video:width" content="720">
+<meta property="og:video:height" content="1280">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://stellaria.games/de/">
 <link rel="alternate" hreflang="es" href="https://stellaria.games/es/">
 <link rel="alternate" hreflang="en" href="https://stellaria.games/en/">
@@ -17,20 +29,35 @@
 <link rel="stylesheet" href="/estilo.css">
 </head>
 <body>
-<main>
+<main class="portada">
+  <div class="escena">
   <div class="cabecera">
     <div>
       <h1>Stellaria</h1>
-      <p class="sub">Polyeder und Stellationen · ein Puzzle</p>
+      <p class="sub">Ein Polyeder-Puzzle</p>
     </div>
     <div class="marca" aria-hidden="true"></div>
   </div>
 
-  <canvas class="solido" id="solido" width="720" height="720" aria-label="Ein sich drehendes Ikosaeder, mit Tinte gezeichnet"></canvas>
+  <div class="pantalla">
+    <video autoplay muted loop playsinline preload="metadata" poster="/media/portada.jpg" width="720" height="1280" aria-label="Ein fertiger Stern, der sich in der Galerie von Stellaria dreht">
+      <source src="/media/portada.mp4" type="video/mp4">
+      <source src="/media/portada.webm" type="video/webm">
+    </video>
+  </div>
 
-  <div class="placa">
-    <p>Ein Körper ist nur der Anfang. Verlängere seine Flächen, und die Stellationen erscheinen: Jede wird Teil für Teil zusammengesetzt, durch Drehen und Werfen, mit echter Geometrie darunter.</p>
-    <p><a href="https://apps.apple.com/app/apple-store/id6811068096?pt=129444067&ct=web&mt=8">Jetzt im App Store</a>, für iPhone und iPad.</p>
+  <p class="tiendas">
+    <a class="boton" href="https://apps.apple.com/app/apple-store/id6811068096?pt=129444067&ct=web&mt=8">App Store · iPhone und iPad</a>
+    <a class="boton" href="https://apps.apple.com/app/apple-store/id6819857964?pt=129444067&ct=web&mt=12">Mac App Store</a>
+  </p>
+
+  <p class="frase">Dreh jedes Teil mit einem Tippen, wirf es in seine Lücke und schließ den Stern, bevor sich der Himmel füllt. Jeder Stern ist eine Stellation eines Polyeders, auf dem Gerät berechnet: Die Geometrie ist echt.</p>
+
+  <ul class="tres">
+    <li>28 Polyeder · 234 Stellationen · 7 Sprachen</li>
+    <li>Kostenlos mit vier Polyedern, ein einziger Kauf für den Rest · keine Werbung, keine Konten, keine Datenerhebung</li>
+    <li>Von einem einzigen Entwickler, in Spanien</li>
+  </ul>
   </div>
 
   <p>
@@ -41,6 +68,5 @@
   <p class="idiomas"><a href="/es/" hreflang="es" lang="es">Español</a> · <a href="/en/" hreflang="en" lang="en">English</a> · <a href="/fr/" hreflang="fr" lang="fr">Français</a> · <a href="/it/" hreflang="it" lang="it">Italiano</a> · <a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <span>Deutsch</span> · <a href="/ja/" hreflang="ja" lang="ja">日本語</a></p>
   <p class="pie">© 2026 Luis Fernando Lendrino Díaz</p>
 </main>
-<script src="/solido.js"></script>
 </body>
 </html>

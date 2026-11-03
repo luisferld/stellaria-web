@@ -26,5 +26,7 @@ versión, reenvían al español. Cada página lleva el selector de idiomas
 al pie y las etiquetas `hreflang`.
 
 **Las páginas no se editan a mano**: los textos viven en `generar.py`,
-y `./generar.py` las vuelve a escribir todas. `estilo.css` y
-`solido.js` (el icosaedro a tinta de la portada) son comunes.
+y `./generar.py` las vuelve a escribir todas. `estilo.css` es
+común. La portada abre con un bucle del juego (`media/portada.mp4`,
+`.webm` y el póster `.jpg`), cortado del clip de la vista previa de la
+App Store; cómo se cortó está en `docs/informe-nube-portada.md`.
