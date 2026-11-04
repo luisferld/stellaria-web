@@ -32,27 +32,88 @@ small{color:var(--tinta-suave)}
 .capturas figure{margin:0}.capturas img{width:100%;height:auto;border:1px solid var(--tinta);background:var(--hoja)}
 .capturas figcaption{font-size:12px;color:var(--tinta-suave);margin-top:4px}
 .icono{vertical-align:middle;border-radius:22px;margin-right:8px}
-/* La portada: el juego delante. En móvil, una columna con el vídeo a todo
-   lo ancho; en pantalla ancha, el vídeo vertical a un lado y el texto al otro. */
-main.portada{max-width:980px}
-.escena{display:grid;grid-template-columns:minmax(0,1fr)}
-.escena .cabecera{margin-bottom:20px}
-.escena .sub{margin:0}
-.pantalla{margin:0 -22px;border-top:1px solid var(--tinta);border-bottom:1px solid var(--tinta);background:var(--hoja)}
-.pantalla video{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
-.tiendas{margin:22px 0 0}
-.tiendas .boton{display:block;text-align:center;margin:0 0 10px;padding:13px 12px;font-size:14px}
-.frase{margin:18px 0 0}
-.tres{list-style:none;padding:0;margin:22px 0 0;font-size:15px}
+/* La portada: delante, la estrella jugable (portada.js); debajo, el juego de verdad.
+   En móvil, una columna con la estrella a todo lo ancho; en pantalla ancha, la estrella
+   a un lado y el lema al otro, y las secciones en dos columnas que se alternan. */
+[hidden]{display:none!important}
+main.portada{max-width:1120px;padding-top:30px}
+.portada .cabecera{margin-bottom:22px}
+.portada .sub{margin:0}
+.portada button:focus-visible,.portada a:focus-visible{outline:2px solid var(--rojo);outline-offset:2px}
+.arranque{display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"lema" "juego" "tiendas" "concepto";row-gap:22px}
+.lema{grid-area:lema;font-size:clamp(30px,8vw,56px);line-height:1.02;letter-spacing:.03em;margin:0;text-wrap:balance}
+.juego{grid-area:juego;position:relative;margin:0 -22px;border-top:1px solid var(--tinta);border-bottom:1px solid var(--tinta);background:var(--hoja)}
+.juego canvas{display:block;width:100%;height:auto;aspect-ratio:1/1;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
+.juego canvas:focus{outline:none}
+.juego canvas:focus-visible{outline:2px solid var(--rojo);outline-offset:-4px}
+.juego.puntero canvas:focus-visible{outline:none}
+.juego noscript img{position:absolute;left:0;top:0;width:100%;height:auto}
+.consola{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;padding:12px 22px 14px;border-top:1px solid var(--tinta)}
+.consola p{flex:1 1 220px;margin:0;font-size:15px;line-height:1.4;min-height:2.8em;display:flex;align-items:center}
+.consola button{-webkit-appearance:none;appearance:none;font:inherit;font-size:13px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--tinta);background:var(--hoja);border:1px solid var(--tinta);border-radius:0;padding:0 16px;min-height:44px;cursor:pointer;touch-action:manipulation}
+.consola button:hover{background:var(--papel)}
+.consola .jugar,.consola .lanza{background:var(--tinta);color:var(--hoja)}
+.consola .jugar:hover,.consola .lanza:hover{background:var(--tinta);opacity:.86}
+.mandos{display:flex;gap:8px}
+.mandos [data-accion="izq"],.mandos [data-accion="der"]{font-size:20px;min-width:48px;padding:0 10px}
+.concepto{grid-area:concepto;margin:0;font-size:18px}
+.arranque .tiendas{grid-area:tiendas}
+.tiendas .boton{display:block;text-align:center;margin:0 0 10px;padding:14px 12px;font-size:14px}
+.gratis{margin:4px 0 0;font-size:14px;line-height:1.45;color:var(--tinta-suave)}
+.tiendas.brilla .boton{animation:brilla 1s ease-out 2}
+@keyframes brilla{0%{outline:2px solid rgba(213,69,41,.9);outline-offset:0}100%{outline:2px solid rgba(213,69,41,0);outline-offset:12px}}
+/* Cuatro cifras, con el cero en bermellón. */
+.cifras{list-style:none;padding:0;margin:56px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--tinta)}
+.cifras li{padding:16px 14px 16px 0;border-bottom:1px solid var(--tinta)}
+.cifras li:nth-child(2n){padding-left:16px;border-left:1px solid var(--tinta)}
+.cifras b{display:block;font-weight:900;font-size:clamp(44px,11vw,76px);line-height:.95;letter-spacing:-.01em}
+.cifras li:last-child b{color:var(--rojo)}
+.cifras span{display:block;margin-top:8px;font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--tinta-suave)}
+/* Las secciones: el texto y su bucle o su captura. */
+.seccion{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;margin-top:72px;padding-top:28px;border-top:1px solid var(--tinta)}
+.seccion h2{font-size:clamp(24px,4.6vw,34px);letter-spacing:.05em;margin:0 0 14px;text-wrap:balance}
+.seccion h2::before{content:"";display:inline-block;width:.42em;height:.42em;background:var(--rojo);margin-right:.5em;vertical-align:.1em}
+.texto p{margin:0}
+.medio{margin:0;justify-self:center;width:100%}
+.medio.vertical{max-width:300px}
+.medio.cuadrado{max-width:460px}
+.medio video,.medio img{display:block;width:100%;height:auto;border:1px solid var(--tinta);background:var(--hoja)}
+.medio figcaption{margin-top:9px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--tinta-suave)}
+.medio figcaption span{display:block;margin-top:2px;opacity:.8}
+.medio figcaption span:first-child{margin-top:0}
+.compra .placa{margin:0}
+.compra .tiendas .boton{margin-bottom:10px}
+.tres{list-style:none;padding:0;margin:14px 0 0;font-size:15px}
 .tres li{border-top:1px solid var(--tinta);padding:9px 0}
-.tres li:last-child{border-bottom:1px solid var(--tinta)}
-@media (min-width:760px){
-  .escena{grid-template-columns:minmax(0,360px) minmax(0,1fr);grid-template-rows:1fr auto auto auto auto 1fr;column-gap:56px;
-    grid-template-areas:"pantalla ." "pantalla cabecera" "pantalla frase" "pantalla tiendas" "pantalla tres" "pantalla .";margin-top:10px}
-  .escena .cabecera{grid-area:cabecera}
-  .pantalla{grid-area:pantalla;margin:0;border:1px solid var(--tinta)}
-  .pantalla video{aspect-ratio:9/16}
-  .frase{grid-area:frase;margin:6px 0 0}
-  .tiendas{grid-area:tiendas;max-width:360px}
-  .tres{grid-area:tres;margin-top:12px}
+.tres li:last-child{padding-bottom:0}
+.cierre{margin:64px 0 0;max-width:640px;font-size:15px;color:var(--tinta-suave)}
+.hojas{margin:36px 0 0}
+:lang(ja) .lema{font-size:clamp(26px,7.4vw,42px);line-height:1.25;letter-spacing:.02em}
+:lang(ja) .lema,:lang(ja) .seccion h2{word-break:keep-all;word-break:auto-phrase}
+:lang(ja) .seccion h2{letter-spacing:.02em;line-height:1.3}
+:lang(ja) .cifras span{letter-spacing:.04em}
+@media (min-width:600px) and (max-width:899px){
+  .juego{margin:0;max-width:560px;border:1px solid var(--tinta)}
+  .consola{padding:12px 16px 14px}
+  .concepto,.arranque .tiendas{max-width:560px}
 }
+@media (min-width:760px){
+  .cifras{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .cifras li{padding:18px 18px 18px 0}
+  .cifras li+li{padding-left:20px;border-left:1px solid var(--tinta)}
+}
+@media (min-width:900px){
+  main.portada{padding-top:40px}
+  .arranque{grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);grid-template-rows:1fr auto auto auto 1fr;
+    grid-template-areas:"juego ." "juego lema" "juego concepto" "juego tiendas" "juego .";column-gap:64px;row-gap:0}
+  .juego{margin:0;border:1px solid var(--tinta)}
+  .consola{padding:12px 16px 14px}
+  .lema{margin-bottom:22px}
+  .concepto{margin-bottom:26px}
+  .arranque .tiendas{max-width:420px}
+  .seccion{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:72px;align-items:center}
+  .seccion.izquierda .medio{order:-1}
+  .texto p{font-size:18px}
+  .compra{align-items:start}
+}
+@media (prefers-reduced-motion:reduce){.tiendas.brilla .boton{animation:none}}

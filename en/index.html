@@ -9,9 +9,10 @@
 <meta property="og:url" content="https://stellaria.games/en/">
 <meta property="og:title" content="Stellaria · A polyhedra puzzle">
 <meta property="og:description" content="Turn each piece with a tap, launch it into its slot and close the star before the sky fills up. Every star is a stellation of a polyhedron, computed on the device: the geometry is real.">
-<meta property="og:image" content="https://stellaria.games/media/portada.jpg">
-<meta property="og:image:width" content="720">
-<meta property="og:image:height" content="1280">
+<meta property="og:image" content="https://stellaria.games/media/compartir.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Stellaria">
 <meta property="og:video" content="https://stellaria.games/media/portada.mp4">
 <meta property="og:video:type" content="video/mp4">
 <meta property="og:video:width" content="720">
@@ -27,10 +28,11 @@
 <link rel="alternate" hreflang="ja" href="https://stellaria.games/ja/">
 <link rel="alternate" hreflang="x-default" href="https://stellaria.games/">
 <link rel="stylesheet" href="/estilo.css">
+<meta name="theme-color" content="#F1ECDC">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Stellaria", "url": "https://stellaria.games/en/", "inLanguage": "en", "description": "Stellaria: a puzzle of polyhedra and stellations for iPhone, iPad and Mac. Every stellation is assembled piece by piece; the geometry is real.", "image": "https://stellaria.games/media/compartir.jpg", "genre": "Puzzle", "applicationCategory": "GameApplication", "gamePlatform": ["iPhone", "iPad", "Mac"], "operatingSystem": "iOS, iPadOS, macOS", "author": {"@type": "Person", "name": "Luis Fernando Lendrino Díaz"}}</script>
 </head>
 <body>
 <main class="portada">
-  <div class="escena">
   <div class="cabecera">
     <div>
       <h1>Stellaria</h1>
@@ -39,34 +41,118 @@
     <div class="marca" aria-hidden="true"></div>
   </div>
 
-  <div class="pantalla">
-    <video autoplay muted loop playsinline preload="metadata" poster="/media/portada.jpg" width="720" height="1280" aria-label="A finished star turning in the Stellaria Gallery">
-      <source src="/media/portada.mp4" type="video/mp4">
-      <source src="/media/portada.webm" type="video/webm">
-    </video>
-  </div>
+  <section class="arranque">
+    <h2 class="lema">Build stars,<br>piece by piece</h2>
+    <div class="juego" data-estrella data-textos="{&quot;invita&quot;: &quot;Watch the star build itself, or build it yourself.&quot;, &quot;invita_quieta&quot;: &quot;This is the finished star; now build it yourself.&quot;, &quot;pieza&quot;: &quot;Piece {n} of 8&quot;, &quot;ayuda_toque&quot;: &quot;Tap either side to turn it; swipe up to launch it.&quot;, &quot;ayuda_teclas&quot;: &quot;Turn it with ← and →; launch it with ↑.&quot;, &quot;no_encaja&quot;: &quot;Misaligned, it bounces back: turn it and launch it again.&quot;, &quot;completa&quot;: &quot;Star complete! That’s how Stellaria begins; 233 more to go.&quot;}">
+      <canvas width="560" height="560" tabindex="0" role="application" aria-label="Stellaria’s first round: eight pieces around an octahedron. You can also play with the keyboard or the buttons."></canvas>
+      <noscript><img src="/media/estrella.png" width="560" height="560" alt=""></noscript>
+      <div class="consola" hidden>
+        <p data-estado aria-live="polite">Watch the star build itself, or build it yourself.</p>
+        <button type="button" class="jugar" data-accion="jugar">Play here</button>
+        <div class="mandos" data-mandos hidden>
+          <button type="button" data-accion="izq" aria-label="Turn left">←</button>
+          <button type="button" class="lanza" data-accion="lanza">Launch <span aria-hidden="true">↑</span></button>
+          <button type="button" data-accion="der" aria-label="Turn right">→</button>
+        </div>
+        <button type="button" class="jugar" data-accion="otra" hidden>Play again</button>
+      </div>
+    </div>
+    <p class="concepto">Take a solid and extend its faces beyond its edges, and the stars it was hiding appear: its stellations. In Stellaria, you build them.</p>
+    <div class="tiendas" data-brilla>
+      <a class="boton" href="https://apps.apple.com/app/apple-store/id6811068096?pt=129444067&ct=web&mt=8">App Store · iPhone and iPad</a>
+      <a class="boton" href="https://apps.apple.com/app/apple-store/id6819857964?pt=129444067&ct=web&mt=12">Mac App Store</a>
+      <p class="gratis">Free with four polyhedra, one purchase for the rest · no ads, no accounts, no data collection</p>
+    </div>
+  </section>
 
-  <p class="tiendas">
-    <a class="boton" href="https://apps.apple.com/app/apple-store/id6811068096?pt=129444067&ct=web&mt=8">App Store · iPhone and iPad</a>
-    <a class="boton" href="https://apps.apple.com/app/apple-store/id6819857964?pt=129444067&ct=web&mt=12">Mac App Store</a>
-  </p>
-
-  <p class="frase">Turn each piece with a tap, launch it into its slot and close the star before the sky fills up. Every star is a stellation of a polyhedron, computed on the device: the geometry is real.</p>
-
-  <ul class="tres">
-    <li>28 polyhedra · 234 stellations · 7 languages</li>
-    <li>Free with four polyhedra, one purchase for the rest · no ads, no accounts, no data collection</li>
-    <li>Made by one developer in Spain</li>
+  <ul class="cifras">
+    <li><b>28</b><span>polyhedra</span></li>
+    <li><b>234</b><span>stellations</span></li>
+    <li><b>59</b><span>icosahedra</span></li>
+    <li><b>0</b><span>ads</span></li>
   </ul>
-  </div>
 
-  <p>
+  <section class="seccion">
+    <div class="texto">
+      <h2>Two taps and a swipe</h2>
+      <p>Each piece falls toward its slot, drawn as a ghost on the solid. Tap the right or left half of the screen to rotate it a quarter turn; when it lines up, swipe up and it shoots into place. A misaligned piece bounces and stays in the air while another one comes in; with eight in the air, the sky is full and the game is over. Every second you save earns points, and rescues and master pieces help when things get tight. No reading required: the guided first round, with no timer and no way to lose, teaches you the controls.</p>
+    </div>
+    <figure class="medio vertical">
+      <video muted loop playsinline preload="none" poster="/media/portada.jpg" width="720" height="1280" aria-label="A game of Stellaria: the pieces fly into their slots as the score climbs." data-bucle>
+        <source src="/media/portada.mp4" type="video/mp4">
+        <source src="/media/portada.webm" type="video/webm">
+      </video>
+      <figcaption><span>Image from the full game</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="seccion izquierda">
+    <div class="texto">
+      <h2>28 polyhedra, 234 stellations</h2>
+      <p>Platonic, Archimedean and Catalan solids, prisms, antiprisms, bipyramids and trapezohedra. Nothing is modeled by hand: the game computes every solid on your device from its geometry. Seven cards explain what a polyhedron, a stellation and a cell are.</p>
+    </div>
+    <figure class="medio cuadrado">
+      <video muted loop playsinline preload="none" poster="/media/esfera.jpg" width="720" height="720" data-bucle>
+        <source src="/media/esfera.mp4" type="video/mp4">
+        <source src="/media/esfera.webm" type="video/webm">
+      </video>
+      <figcaption>A single stellation: 492 pieces.<span>Image from the full game</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="seccion">
+    <div class="texto">
+      <h2>The 59 icosahedra</h2>
+      <p>In 1938, Coxeter, Du Val, Flather and Petrie counted the fifty-nine stellations of the icosahedron, and Flather built them in cardboard, one by one. In Stellaria they are the final prize of the full game: earned by completing everything else, then assembled one by one.</p>
+    </div>
+    <figure class="medio vertical">
+      <img src="/media/libro-en.webp" width="600" height="1186" loading="lazy" alt="The final prize: the 59 icosahedra">
+      <figcaption><span>Image from the full game</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="seccion izquierda">
+    <div class="texto">
+      <h2>From your screen to your desk</h2>
+      <p>Every stellation you complete is kept in the Gallery, where you can turn it, zoom in and export it as an STL file. With a 3D printer, the star you just built can end up on your desk.</p>
+    </div>
+    <figure class="medio cuadrado">
+      <video muted loop playsinline preload="none" poster="/media/oro.jpg" width="640" height="640" data-bucle>
+        <source src="/media/oro.mp4" type="video/mp4">
+        <source src="/media/oro.webm" type="video/webm">
+      </video>
+      <figcaption>A finished star turning in the Stellaria Gallery<span>Image from the full game</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="seccion compra">
+    <div class="texto">
+      <h2>Free to start, pay once</h2>
+      <p>Free with no time limit: four polyhedra with their ten stellations, the guided first round, the Gallery and STL export. “The full game” unlocks the other 24 polyhedra with a single purchase. No subscriptions, no ads, no accounts, no data collection. Works offline. Game Center is optional: achievements and leaderboards if you want them; if not, your records stay on your device.</p>
+    </div>
+    <div class="placa">
+      <div class="tiendas">
+      <a class="boton" href="https://apps.apple.com/app/apple-store/id6811068096?pt=129444067&ct=web&mt=8">App Store · iPhone and iPad</a>
+      <a class="boton" href="https://apps.apple.com/app/apple-store/id6819857964?pt=129444067&ct=web&mt=12">Mac App Store</a>
+      </div>
+      <ul class="tres">
+        <li>28 polyhedra · 234 stellations · 7 languages</li>
+        <li>Free with four polyhedra, one purchase for the rest · no ads, no accounts, no data collection</li>
+      </ul>
+    </div>
+  </section>
+
+  <p class="cierre">Paper, ink and vermilion: the visual language borrows its vocabulary from El Lissitzky’s Prouns. The music and sounds are original, synthesized for this game. Made by one person in Spain.</p>
+
+  <p class="hojas">
     <a class="hoja" href="/en/support/">Support</a>
     <a class="hoja" href="/en/privacy/">Privacy</a>
+    <a class="hoja" href="/press/">Press</a>
   </p>
 
   <p class="idiomas"><a href="/es/" hreflang="es" lang="es">Español</a> · <span>English</span> · <a href="/fr/" hreflang="fr" lang="fr">Français</a> · <a href="/it/" hreflang="it" lang="it">Italiano</a> · <a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="/de/" hreflang="de" lang="de">Deutsch</a> · <a href="/ja/" hreflang="ja" lang="ja">日本語</a></p>
   <p class="pie">© 2026 Luis Fernando Lendrino Díaz</p>
 </main>
+<script src="/portada.js"></script>
 </body>
 </html>

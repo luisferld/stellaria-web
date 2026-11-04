@@ -9,9 +9,10 @@
 <meta property="og:url" content="https://stellaria.games/fr/">
 <meta property="og:title" content="Stellaria · Un puzzle de polyèdres">
 <meta property="og:description" content="Tournez chaque pièce d’un toucher, lancez-la dans son logement et refermez l’étoile avant que le ciel ne soit plein. Chaque étoile est une stellation d’un polyèdre, calculée sur l’appareil : la géométrie est réelle.">
-<meta property="og:image" content="https://stellaria.games/media/portada.jpg">
-<meta property="og:image:width" content="720">
-<meta property="og:image:height" content="1280">
+<meta property="og:image" content="https://stellaria.games/media/compartir.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Stellaria">
 <meta property="og:video" content="https://stellaria.games/media/portada.mp4">
 <meta property="og:video:type" content="video/mp4">
 <meta property="og:video:width" content="720">
@@ -27,10 +28,11 @@
 <link rel="alternate" hreflang="ja" href="https://stellaria.games/ja/">
 <link rel="alternate" hreflang="x-default" href="https://stellaria.games/">
 <link rel="stylesheet" href="/estilo.css">
+<meta name="theme-color" content="#F1ECDC">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Stellaria", "url": "https://stellaria.games/fr/", "inLanguage": "fr", "description": "Stellaria : un puzzle de polyèdres et de stellations pour iPhone, iPad et Mac. Chaque stellation s’assemble pièce par pièce ; la géométrie est réelle.", "image": "https://stellaria.games/media/compartir.jpg", "genre": "Puzzle", "applicationCategory": "GameApplication", "gamePlatform": ["iPhone", "iPad", "Mac"], "operatingSystem": "iOS, iPadOS, macOS", "author": {"@type": "Person", "name": "Luis Fernando Lendrino Díaz"}}</script>
 </head>
 <body>
 <main class="portada">
-  <div class="escena">
   <div class="cabecera">
     <div>
       <h1>Stellaria</h1>
@@ -39,34 +41,118 @@
     <div class="marca" aria-hidden="true"></div>
   </div>
 
-  <div class="pantalla">
-    <video autoplay muted loop playsinline preload="metadata" poster="/media/portada.jpg" width="720" height="1280" aria-label="Une étoile terminée qui tourne dans la Galerie de Stellaria">
-      <source src="/media/portada.mp4" type="video/mp4">
-      <source src="/media/portada.webm" type="video/webm">
-    </video>
-  </div>
+  <section class="arranque">
+    <h2 class="lema">Montez des étoiles,<br>pièce par pièce</h2>
+    <div class="juego" data-estrella data-textos="{&quot;invita&quot;: &quot;Regardez l’étoile se monter toute seule, ou jouez vous-même.&quot;, &quot;invita_quieta&quot;: &quot;Voici l’étoile terminée ; à vous de la monter.&quot;, &quot;pieza&quot;: &quot;Pièce {n} sur 8&quot;, &quot;ayuda_toque&quot;: &quot;Touchez à gauche ou à droite pour la faire pivoter ; glissez vers le haut pour la lancer.&quot;, &quot;ayuda_teclas&quot;: &quot;Faites-la pivoter avec ← et → ; lancez-la avec ↑.&quot;, &quot;no_encaja&quot;: &quot;Mal alignée, elle rebondit : faites-la pivoter et relancez-la.&quot;, &quot;completa&quot;: &quot;Étoile complète ! C’est ainsi que commence Stellaria ; il en reste 233.&quot;}">
+      <canvas width="560" height="560" tabindex="0" role="application" aria-label="La première partie de Stellaria : huit pièces autour d’un octaèdre. Elle se joue aussi au clavier ou avec les boutons."></canvas>
+      <noscript><img src="/media/estrella.png" width="560" height="560" alt=""></noscript>
+      <div class="consola" hidden>
+        <p data-estado aria-live="polite">Regardez l’étoile se monter toute seule, ou jouez vous-même.</p>
+        <button type="button" class="jugar" data-accion="jugar">Jouer ici</button>
+        <div class="mandos" data-mandos hidden>
+          <button type="button" data-accion="izq" aria-label="Pivoter à gauche">←</button>
+          <button type="button" class="lanza" data-accion="lanza">Lancer <span aria-hidden="true">↑</span></button>
+          <button type="button" data-accion="der" aria-label="Pivoter à droite">→</button>
+        </div>
+        <button type="button" class="jugar" data-accion="otra" hidden>Rejouer</button>
+      </div>
+    </div>
+    <p class="concepto">Prenez un solide et prolongez ses faces au-delà de ses arêtes : les étoiles qu’il cachait apparaissent ; ce sont ses stellations. Dans Stellaria, c’est vous qui les assemblez.</p>
+    <div class="tiendas" data-brilla>
+      <a class="boton" href="https://apps.apple.com/app/apple-store/id6811068096?pt=129444067&ct=web&mt=8">App Store · iPhone et iPad</a>
+      <a class="boton" href="https://apps.apple.com/app/apple-store/id6819857964?pt=129444067&ct=web&mt=12">Mac App Store</a>
+      <p class="gratis">Gratuit avec quatre polyèdres, un seul achat pour le reste · sans publicité, sans compte, sans collecte de données</p>
+    </div>
+  </section>
 
-  <p class="tiendas">
-    <a class="boton" href="https://apps.apple.com/app/apple-store/id6811068096?pt=129444067&ct=web&mt=8">App Store · iPhone et iPad</a>
-    <a class="boton" href="https://apps.apple.com/app/apple-store/id6819857964?pt=129444067&ct=web&mt=12">Mac App Store</a>
-  </p>
-
-  <p class="frase">Tournez chaque pièce d’un toucher, lancez-la dans son logement et refermez l’étoile avant que le ciel ne soit plein. Chaque étoile est une stellation d’un polyèdre, calculée sur l’appareil : la géométrie est réelle.</p>
-
-  <ul class="tres">
-    <li>28 polyèdres · 234 stellations · 7 langues</li>
-    <li>Gratuit avec quatre polyèdres, un seul achat pour le reste · sans publicité, sans compte, sans collecte de données</li>
-    <li>Fait par un seul développeur, en Espagne</li>
+  <ul class="cifras">
+    <li><b>28</b><span>polyèdres</span></li>
+    <li><b>234</b><span>stellations</span></li>
+    <li><b>59</b><span>icosaèdres</span></li>
+    <li><b>0</b><span>publicité</span></li>
   </ul>
-  </div>
 
-  <p>
+  <section class="seccion">
+    <div class="texto">
+      <h2>Touchez, glissez, lancez</h2>
+      <p>Chaque pièce tombe vers son emplacement, dessiné sur le solide. Touchez la moitié droite ou gauche de l’écran pour la faire pivoter d’un quart de tour ; quand elle est alignée, glissez vers le haut et elle file à sa place. Une pièce mal alignée rebondit et reste en l’air pendant qu’une autre arrive ; avec huit pièces en l’air, le ciel est plein et la partie s’arrête. Chaque seconde gagnée rapporte des points, et les sauvetages et les pièces maîtresses vous aident quand ça se corse. Pas besoin de lire : la partie guidée, sans chrono et sans défaite, vous apprend les commandes.</p>
+    </div>
+    <figure class="medio vertical">
+      <video muted loop playsinline preload="none" poster="/media/portada.jpg" width="720" height="1280" aria-label="Une partie de Stellaria : les pièces filent vers leur emplacement et le score grimpe." data-bucle>
+        <source src="/media/portada.mp4" type="video/mp4">
+        <source src="/media/portada.webm" type="video/webm">
+      </video>
+      <figcaption><span>Image tirée du jeu complet</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="seccion izquierda">
+    <div class="texto">
+      <h2>28 polyèdres, 234 stellations</h2>
+      <p>Solides de Platon, d’Archimède et de Catalan, prismes, antiprismes, bipyramides et trapézoèdres. Rien n’est modélisé à la main : le jeu calcule chaque solide sur votre appareil à partir de sa géométrie. Sept fiches expliquent ce qu’est un polyèdre, une stellation et une cellule.</p>
+    </div>
+    <figure class="medio cuadrado">
+      <video muted loop playsinline preload="none" poster="/media/esfera.jpg" width="720" height="720" data-bucle>
+        <source src="/media/esfera.mp4" type="video/mp4">
+        <source src="/media/esfera.webm" type="video/webm">
+      </video>
+      <figcaption>Une seule stellation : 492 pièces.<span>Image tirée du jeu complet</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="seccion">
+    <div class="texto">
+      <h2>Les 59 icosaèdres</h2>
+      <p>En 1938, Coxeter, Du Val, Flather et Petrie ont dénombré les cinquante-neuf stellations de l’icosaèdre, et Flather les a construites en carton, une à une. Dans Stellaria, elles sont la récompense finale du jeu complet : on les gagne en terminant tout le reste, puis on les assemble une à une.</p>
+    </div>
+    <figure class="medio vertical">
+      <img src="/media/libro-en.webp" width="600" height="1186" loading="lazy" alt="Le bouquet final : les 59 icosaèdres">
+      <figcaption><span>Image tirée du jeu complet</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="seccion izquierda">
+    <div class="texto">
+      <h2>De l’écran à votre bureau</h2>
+      <p>Chaque stellation terminée est conservée dans la Galerie, où vous pouvez la faire tourner, zoomer et l’exporter au format STL. Avec une imprimante 3D, l’étoile que vous venez d’assembler peut finir sur votre bureau.</p>
+    </div>
+    <figure class="medio cuadrado">
+      <video muted loop playsinline preload="none" poster="/media/oro.jpg" width="640" height="640" data-bucle>
+        <source src="/media/oro.mp4" type="video/mp4">
+        <source src="/media/oro.webm" type="video/webm">
+      </video>
+      <figcaption>Une étoile terminée qui tourne dans la Galerie de Stellaria<span>Image tirée du jeu complet</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="seccion compra">
+    <div class="texto">
+      <h2>Gratuit pour commencer, un achat pour toujours</h2>
+      <p>Gratuit et sans limite de temps : quatre polyèdres avec leurs dix stellations, la partie guidée, la Galerie et l’export STL. « Le jeu complet » débloque les 24 autres polyèdres en un seul achat. Sans abonnement, sans publicité, sans compte et sans collecte de données. Fonctionne hors ligne. Game Center est facultatif : succès et classements si vous le souhaitez ; sinon, vos records restent sur votre appareil.</p>
+    </div>
+    <div class="placa">
+      <div class="tiendas">
+      <a class="boton" href="https://apps.apple.com/app/apple-store/id6811068096?pt=129444067&ct=web&mt=8">App Store · iPhone et iPad</a>
+      <a class="boton" href="https://apps.apple.com/app/apple-store/id6819857964?pt=129444067&ct=web&mt=12">Mac App Store</a>
+      </div>
+      <ul class="tres">
+        <li>28 polyèdres · 234 stellations · 7 langues</li>
+        <li>Gratuit avec quatre polyèdres, un seul achat pour le reste · sans publicité, sans compte, sans collecte de données</li>
+      </ul>
+    </div>
+  </section>
+
+  <p class="cierre">Papier, encre et vermillon : le langage visuel emprunte son vocabulaire aux Prouns d’El Lissitzky. La musique et les sons sont originaux, synthétisés pour ce jeu. Créé par une seule personne, en Espagne.</p>
+
+  <p class="hojas">
     <a class="hoja" href="/fr/assistance/">Assistance</a>
     <a class="hoja" href="/fr/confidentialite/">Confidentialité</a>
+    <a class="hoja" href="/press/">Presse</a>
   </p>
 
   <p class="idiomas"><a href="/es/" hreflang="es" lang="es">Español</a> · <a href="/en/" hreflang="en" lang="en">English</a> · <span>Français</span> · <a href="/it/" hreflang="it" lang="it">Italiano</a> · <a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="/de/" hreflang="de" lang="de">Deutsch</a> · <a href="/ja/" hreflang="ja" lang="ja">日本語</a></p>
   <p class="pie">© 2026 Luis Fernando Lendrino Díaz</p>
 </main>
+<script src="/portada.js"></script>
 </body>
 </html>

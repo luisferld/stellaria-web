@@ -25,8 +25,21 @@ los siete), y `/privacidad/` y `/soporte/`, las rutas de la primera
 versión, reenvían al español. Cada página lleva el selector de idiomas
 al pie y las etiquetas `hreflang`.
 
-**Las páginas no se editan a mano**: los textos viven en `generar.py`,
-y `./generar.py` las vuelve a escribir todas. `estilo.css` es
-común. La portada abre con un bucle del juego (`media/portada.mp4`,
-`.webm` y el póster `.jpg`), cortado del clip de la vista previa de la
-App Store; cómo se cortó está en `docs/informe-nube-portada.md`.
+**Las páginas no se editan a mano**: los textos viven en `generar.py`
+(los de la portada, en `textos_portada.py`), y `./generar.py` las
+vuelve a escribir todas. `estilo.css` es común.
+
+La portada abre con **la estrella jugable**: la primera partida del
+juego (la estrella octángula, ocho piezas alrededor de un octaedro),
+dibujada en un canvas por `portada.js`, sin dependencias. Mientras
+nadie juega, se monta sola; con un toque (o con Intro) se juega: un
+toque a un lado gira la pieza, deslizar hacia arriba la lanza (en el
+teclado, ← → y ↑). Debajo van cuatro cifras, cinco secciones con los
+textos de la ficha 1.0.5 de la App Store, tres bucles del juego
+(`media/portada.*`, una partida; `media/esfera.*`, la estelación de 492
+piezas; `media/oro.*`, una estrella terminada en la Galería), la
+captura del libro (`media/libro-es.webp` y `libro-en.webp`) y las dos
+tiendas. Los bucles solo se cargan y se reproducen mientras se ven; con
+«reducir movimiento», nada arranca solo. La tarjeta para compartir el
+enlace es `media/compartir.jpg` (1200×630). Cómo se hizo todo, en
+`docs/informe-portada-jugable.md`.

@@ -7,7 +7,11 @@ rutas de la primera versión) reenvían al español.
 
     ./generar.py
 """
+import html
+import json
 import pathlib
+
+from textos_portada import P   # los textos de la portada (la estrella jugable y sus secciones)
 
 RAIZ = pathlib.Path(__file__).resolve().parent
 DOMINIO = "https://stellaria.games"
@@ -304,9 +308,10 @@ def lang(idioma):
     return LANG.get(idioma, idioma)
 
 
-def cabeza(idioma, pagina, titulo, descripcion=None, compartir=None, clase=None):
+def cabeza(idioma, pagina, titulo, descripcion=None, compartir=None, clase=None, extra=""):
     """compartir: (título, descripción) para las etiquetas og: y twitter:
-    de la portada, con el póster y el vídeo del bucle."""
+    de la portada, con la tarjeta de 1200×630 y el vídeo del bucle.
+    extra: más etiquetas para el <head> (la portada: color del tema y datos estructurados)."""
     alternos = "\n".join(
         f'<link rel="alternate" hreflang="{lang(i)}" href="{DOMINIO}{ruta(i, pagina)}">' for i in IDIOMAS)
     desc = f'\n<meta name="description" content="{descripcion}">' if descripcion else ""
@@ -317,9 +322,10 @@ def cabeza(idioma, pagina, titulo, descripcion=None, compartir=None, clase=None)
 <meta property="og:url" content="{DOMINIO}{ruta(idioma, pagina)}">
 <meta property="og:title" content="{og_titulo}">
 <meta property="og:description" content="{og_desc}">
-<meta property="og:image" content="{DOMINIO}/media/portada.jpg">
-<meta property="og:image:width" content="720">
-<meta property="og:image:height" content="1280">
+<meta property="og:image" content="{DOMINIO}/media/compartir.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Stellaria">
 <meta property="og:video" content="{DOMINIO}/media/portada.mp4">
 <meta property="og:video:type" content="video/mp4">
 <meta property="og:video:width" content="720">
@@ -334,7 +340,7 @@ def cabeza(idioma, pagina, titulo, descripcion=None, compartir=None, clase=None)
 <link rel="canonical" href="{DOMINIO}{ruta(idioma, pagina)}">
 {alternos}
 <link rel="alternate" hreflang="x-default" href="{DOMINIO}/">
-<link rel="stylesheet" href="/estilo.css">
+<link rel="stylesheet" href="/estilo.css">{extra}
 </head>
 <body>
 <main{f' class="{clase}"' if clase else ""}>"""
@@ -354,13 +360,44 @@ def correo(texto, asunto=False):
 
 
 def portada(idioma):
-    """Lo primero, el juego en movimiento: el bucle de la estrella girando
-    (media/portada.*), el nombre, dos frases, las dos tiendas y tres datos.
-    En móvil, una columna; en pantalla ancha, el vídeo a un lado (estilo.css)."""
-    t = T[idioma]
-    datos = "\n".join(f"    <li>{d}</li>" for d in t["datos"])
-    return f"""{cabeza(idioma, "", t["titulo"], t["descripcion"], (f'Stellaria · {t["sub"]}', f'{t["p1"]} {t["p2"]}'), "portada")}
-  <div class="escena">
+    """La portada: delante, la estrella jugable (la primera partida del juego,
+    dibujada por portada.js); debajo, el juego de verdad: cuatro cifras, cinco
+    secciones con sus bucles y capturas, las dos tiendas y el cierre. Los textos
+    salen de T (los de siempre) y de P (textos_portada.py). En móvil, una
+    columna; en pantalla ancha, la estrella a un lado y el lema al otro."""
+    t, p = T[idioma], P[idioma]
+    captura = "es" if idioma == "es" else "en"     # la interfaz del juego en las capturas
+    textos = {k: p[k] for k in ("invita", "invita_quieta", "pieza", "ayuda_toque", "ayuda_teclas", "no_encaja", "completa")}
+    textos_js = html.escape(json.dumps(textos, ensure_ascii=False), quote=True)
+    tiendas = f"""<a class="boton" href="{TIENDA}">{t["boton_ios"]}</a>
+      <a class="boton" href="{TIENDA_MAC}">Mac App Store</a>"""
+    cifras = "\n".join(f"    <li><b>{n}</b><span>{e}</span></li>"
+                       for n, e in zip(("28", "234", "59", "0"), p["cifras"]))
+    (s1, c1), (s2, c2), (s3, c3), (s4, c4), (s5, c5) = p["secciones"]
+    datos = "\n".join(f"        <li>{d}</li>" for d in t["datos"][:2])   # el tercero lo dice el cierre
+    prensa = "/es/prensa/" if idioma == "es" else "/press/"
+    ld = json.dumps({
+        "@context": "https://schema.org", "@type": "VideoGame", "name": "Stellaria",
+        "url": f"{DOMINIO}{ruta(idioma, '')}", "inLanguage": lang(idioma),
+        "description": t["descripcion"], "image": f"{DOMINIO}/media/compartir.jpg",
+        "genre": "Puzzle", "applicationCategory": "GameApplication",
+        "gamePlatform": ["iPhone", "iPad", "Mac"], "operatingSystem": "iOS, iPadOS, macOS",
+        "author": {"@type": "Person", "name": "Luis Fernando Lendrino Díaz"},
+    }, ensure_ascii=False)
+    extra = f"""
+<meta name="theme-color" content="#F1ECDC">
+<script type="application/ld+json">{ld}</script>"""
+
+    def bucle(fuente, ancho, alto, etiqueta=None, webm=False):
+        """Un bucle que solo se carga y suena cuando se ve (portada.js). Sin etiqueta,
+        lo nombra el pie de su figura."""
+        otra = f'\n        <source src="/media/{fuente}.webm" type="video/webm">' if webm else ""
+        nombre = f' aria-label="{etiqueta}"' if etiqueta else ""
+        return f"""<video muted loop playsinline preload="none" poster="/media/{fuente}.jpg" width="{ancho}" height="{alto}"{nombre} data-bucle>
+        <source src="/media/{fuente}.mp4" type="video/mp4">{otra}
+      </video>"""
+
+    return f"""{cabeza(idioma, "", t["titulo"], t["descripcion"], (f'Stellaria · {t["sub"]}', f'{t["p1"]} {t["p2"]}'), "portada", extra)}
   <div class="cabecera">
     <div>
       <h1>Stellaria</h1>
@@ -369,33 +406,104 @@ def portada(idioma):
 {MARCA}
   </div>
 
-  <div class="pantalla">
-    <video autoplay muted loop playsinline preload="metadata" poster="/media/portada.jpg" width="720" height="1280" aria-label="{t["video"]}">
-      <source src="/media/portada.mp4" type="video/mp4">
-      <source src="/media/portada.webm" type="video/webm">
-    </video>
-  </div>
+  <section class="arranque">
+    <h2 class="lema">{p["lema"].replace("|", "<br>")}</h2>
+    <div class="juego" data-estrella data-textos="{textos_js}">
+      <canvas width="560" height="560" tabindex="0" role="application" aria-label="{p["lienzo"]}"></canvas>
+      <noscript><img src="/media/estrella.png" width="560" height="560" alt=""></noscript>
+      <div class="consola" hidden>
+        <p data-estado aria-live="polite">{p["invita"]}</p>
+        <button type="button" class="jugar" data-accion="jugar">{p["jugar"]}</button>
+        <div class="mandos" data-mandos hidden>
+          <button type="button" data-accion="izq" aria-label="{p["izq"]}">←</button>
+          <button type="button" class="lanza" data-accion="lanza">{p["lanza"]} <span aria-hidden="true">↑</span></button>
+          <button type="button" data-accion="der" aria-label="{p["der"]}">→</button>
+        </div>
+        <button type="button" class="jugar" data-accion="otra" hidden>{p["otra"]}</button>
+      </div>
+    </div>
+    <p class="concepto">{p["concepto"]}</p>
+    <div class="tiendas" data-brilla>
+      {tiendas}
+      <p class="gratis">{t["datos"][1]}</p>
+    </div>
+  </section>
 
-  <p class="tiendas">
-    <a class="boton" href="{TIENDA}">{t["boton_ios"]}</a>
-    <a class="boton" href="{TIENDA_MAC}">Mac App Store</a>
-  </p>
-
-  <p class="frase">{t["p1"]} {t["p2"]}</p>
-
-  <ul class="tres">
-{datos}
+  <ul class="cifras">
+{cifras}
   </ul>
-  </div>
 
-  <p>
+  <section class="seccion">
+    <div class="texto">
+      <h2>{s1}</h2>
+      <p>{c1}</p>
+    </div>
+    <figure class="medio vertical">
+      {bucle("portada", 720, 1280, p["bucle"], webm=True)}
+      <figcaption><span>{p["aviso"]}</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="seccion izquierda">
+    <div class="texto">
+      <h2>{s2}</h2>
+      <p>{c2}</p>
+    </div>
+    <figure class="medio cuadrado">
+      {bucle("esfera", 720, 720, webm=True)}
+      <figcaption>{p["esfera"]}<span>{p["aviso"]}</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="seccion">
+    <div class="texto">
+      <h2>{s3}</h2>
+      <p>{c3}</p>
+    </div>
+    <figure class="medio vertical">
+      <img src="/media/libro-{captura}.webp" width="600" height="1186" loading="lazy" alt="{p["libro"]}">
+      <figcaption><span>{p["aviso"]}</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="seccion izquierda">
+    <div class="texto">
+      <h2>{s4}</h2>
+      <p>{c4}</p>
+    </div>
+    <figure class="medio cuadrado">
+      {bucle("oro", 640, 640, webm=True)}
+      <figcaption>{t["video"]}<span>{p["aviso"]}</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="seccion compra">
+    <div class="texto">
+      <h2>{s5}</h2>
+      <p>{c5}</p>
+    </div>
+    <div class="placa">
+      <div class="tiendas">
+      {tiendas}
+      </div>
+      <ul class="tres">
+{datos}
+      </ul>
+    </div>
+  </section>
+
+  <p class="cierre">{p["cierre"]}</p>
+
+  <p class="hojas">
     <a class="hoja" href="{ruta(idioma, "soporte")}">{t["soporte"]}</a>
     <a class="hoja" href="{ruta(idioma, "privacidad")}">{t["privacidad"]}</a>
+    <a class="hoja" href="{prensa}">{p["prensa"]}</a>
   </p>
 
 {idiomas(idioma, "")}
   <p class="pie">© 2026 Luis Fernando Lendrino Díaz</p>
 </main>
+<script src="/portada.js"></script>
 </body>
 </html>
 """

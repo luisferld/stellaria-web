@@ -9,9 +9,10 @@
 <meta property="og:url" content="https://stellaria.games/ja/">
 <meta property="og:title" content="Stellaria · 多面体パズル">
 <meta property="og:description" content="タップでピースを回し、スワイプで穴へ投げ入れて、空がいっぱいになる前に星を完成させよう。 どの星も多面体の星型で、端末上で計算されています。幾何学は本物です。">
-<meta property="og:image" content="https://stellaria.games/media/portada.jpg">
-<meta property="og:image:width" content="720">
-<meta property="og:image:height" content="1280">
+<meta property="og:image" content="https://stellaria.games/media/compartir.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Stellaria">
 <meta property="og:video" content="https://stellaria.games/media/portada.mp4">
 <meta property="og:video:type" content="video/mp4">
 <meta property="og:video:width" content="720">
@@ -27,10 +28,11 @@
 <link rel="alternate" hreflang="ja" href="https://stellaria.games/ja/">
 <link rel="alternate" hreflang="x-default" href="https://stellaria.games/">
 <link rel="stylesheet" href="/estilo.css">
+<meta name="theme-color" content="#F1ECDC">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Stellaria", "url": "https://stellaria.games/ja/", "inLanguage": "ja", "description": "Stellaria：iPhone、iPad、Macのための、多面体と星型のパズル。星型はピースをひとつずつ組み立てます。幾何学は本物です。", "image": "https://stellaria.games/media/compartir.jpg", "genre": "Puzzle", "applicationCategory": "GameApplication", "gamePlatform": ["iPhone", "iPad", "Mac"], "operatingSystem": "iOS, iPadOS, macOS", "author": {"@type": "Person", "name": "Luis Fernando Lendrino Díaz"}}</script>
 </head>
 <body>
 <main class="portada">
-  <div class="escena">
   <div class="cabecera">
     <div>
       <h1>Stellaria</h1>
@@ -39,34 +41,118 @@
     <div class="marca" aria-hidden="true"></div>
   </div>
 
-  <div class="pantalla">
-    <video autoplay muted loop playsinline preload="metadata" poster="/media/portada.jpg" width="720" height="1280" aria-label="Stellariaのギャラリーで回転する完成した星">
-      <source src="/media/portada.mp4" type="video/mp4">
-      <source src="/media/portada.webm" type="video/webm">
-    </video>
-  </div>
+  <section class="arranque">
+    <h2 class="lema">星を、<br>ピースから<wbr>組み立てる</h2>
+    <div class="juego" data-estrella data-textos="{&quot;invita&quot;: &quot;星がひとりでに組み上がるのを眺めるか、自分で遊んでみてください。&quot;, &quot;invita_quieta&quot;: &quot;これが完成した星です。今度は自分で組み立ててみましょう。&quot;, &quot;pieza&quot;: &quot;ピース {n} / 8&quot;, &quot;ayuda_toque&quot;: &quot;左右どちらかをタップして回し、上へスワイプして発射します。&quot;, &quot;ayuda_teclas&quot;: &quot;← と → で回し、↑ で発射します。&quot;, &quot;no_encaja&quot;: &quot;向きが合っていないので跳ね返りました。回してから、もう一度発射しましょう。&quot;, &quot;completa&quot;: &quot;星が完成！Stellariaはここから始まります。あと233の星型が待っています。&quot;}">
+      <canvas width="560" height="560" tabindex="0" role="application" aria-label="Stellariaの最初のゲーム：正八面体のまわりに8つのピース。キーボードやボタンでも遊べます。"></canvas>
+      <noscript><img src="/media/estrella.png" width="560" height="560" alt=""></noscript>
+      <div class="consola" hidden>
+        <p data-estado aria-live="polite">星がひとりでに組み上がるのを眺めるか、自分で遊んでみてください。</p>
+        <button type="button" class="jugar" data-accion="jugar">ここで遊ぶ</button>
+        <div class="mandos" data-mandos hidden>
+          <button type="button" data-accion="izq" aria-label="左に回す">←</button>
+          <button type="button" class="lanza" data-accion="lanza">発射 <span aria-hidden="true">↑</span></button>
+          <button type="button" data-accion="der" aria-label="右に回す">→</button>
+        </div>
+        <button type="button" class="jugar" data-accion="otra" hidden>もう一度</button>
+      </div>
+    </div>
+    <p class="concepto">立体の面を辺の外側へ延ばしていくと、その立体が内に秘めていた星が現れます。それが星型（ステレーション）です。Stellariaでは、その星をあなたが組み立てます。</p>
+    <div class="tiendas" data-brilla>
+      <a class="boton" href="https://apps.apple.com/app/apple-store/id6811068096?pt=129444067&ct=web&mt=8">App Store · iPhone・iPad</a>
+      <a class="boton" href="https://apps.apple.com/app/apple-store/id6819857964?pt=129444067&ct=web&mt=12">Mac App Store</a>
+      <p class="gratis">4つの多面体は無料、残りは一度の購入で · 広告なし、アカウントなし、データ収集なし</p>
+    </div>
+  </section>
 
-  <p class="tiendas">
-    <a class="boton" href="https://apps.apple.com/app/apple-store/id6811068096?pt=129444067&ct=web&mt=8">App Store · iPhone・iPad</a>
-    <a class="boton" href="https://apps.apple.com/app/apple-store/id6819857964?pt=129444067&ct=web&mt=12">Mac App Store</a>
-  </p>
-
-  <p class="frase">タップでピースを回し、スワイプで穴へ投げ入れて、空がいっぱいになる前に星を完成させよう。 どの星も多面体の星型で、端末上で計算されています。幾何学は本物です。</p>
-
-  <ul class="tres">
-    <li>28の多面体 · 234の星型 · 7言語</li>
-    <li>4つの多面体は無料、残りは一度の購入で · 広告なし、アカウントなし、データ収集なし</li>
-    <li>スペインの開発者がひとりで制作</li>
+  <ul class="cifras">
+    <li><b>28</b><span>多面体</span></li>
+    <li><b>234</b><span>星型</span></li>
+    <li><b>59</b><span>正二十面体の星型</span></li>
+    <li><b>0</b><span>広告</span></li>
   </ul>
-  </div>
 
-  <p>
+  <section class="seccion">
+    <div class="texto">
+      <h2>タップとスワイプだけ</h2>
+      <p>ピースは、立体の上に描かれた自分の場所へ向かって落ちてきます。画面の右半分か左半分をタップすると、ピースが90度回転します。向きが合ったら上へスワイプ。ピースは自分の場所へ飛んでいきます。向きが合っていないピースは跳ね返って空中に残り、その間に次のピースが入ってきます。空中のピースが8つになると空がいっぱいになり、ゲームオーバーです。1秒でも速く組み立てるほど得点が上がり、ピンチのときはレスキューとマスターピースが助けてくれます。文字を読む必要はありません。制限時間もゲームオーバーもない、ガイド付きの最初のゲームで、操作を覚えられます。</p>
+    </div>
+    <figure class="medio vertical">
+      <video muted loop playsinline preload="none" poster="/media/portada.jpg" width="720" height="1280" aria-label="Stellariaのプレイ画面：ピースが自分の場所へ飛んでいき、スコアが上がっていきます。" data-bucle>
+        <source src="/media/portada.mp4" type="video/mp4">
+        <source src="/media/portada.webm" type="video/webm">
+      </video>
+      <figcaption><span>※画像は完全版のものです</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="seccion izquierda">
+    <div class="texto">
+      <h2>28の多面体、234の星型</h2>
+      <p>プラトンの立体、アルキメデスの立体、カタランの立体、角柱、反角柱、双角錐、ねじれ双角錐。手作業でモデリングしたものはひとつもありません。すべての立体は、その幾何学から端末の中で計算されます。7枚のカードが、多面体とは何か、星型とは何か、セルとは何かを説明します。</p>
+    </div>
+    <figure class="medio cuadrado">
+      <video muted loop playsinline preload="none" poster="/media/esfera.jpg" width="720" height="720" data-bucle>
+        <source src="/media/esfera.mp4" type="video/mp4">
+        <source src="/media/esfera.webm" type="video/webm">
+      </video>
+      <figcaption>ひとつの星型に、492ピース。<span>※画像は完全版のものです</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="seccion">
+    <div class="texto">
+      <h2>正二十面体の59の星型</h2>
+      <p>1938年、Coxeter、Du Val、Flather、Petrieの4人は正二十面体の星型が59種類あることを数え上げ、Flatherはそれをひとつずつ厚紙で作りました。Stellariaでは、それが完全版の最後のごほうびです。ほかのすべてを完成させると手に入り、ひとつずつ組み立てられます。</p>
+    </div>
+    <figure class="medio vertical">
+      <img src="/media/libro-en.webp" width="600" height="1186" loading="lazy" alt="最後のごほうび：正二十面体の59の星型">
+      <figcaption><span>※画像は完全版のものです</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="seccion izquierda">
+    <div class="texto">
+      <h2>画面から机の上へ</h2>
+      <p>完成した星型はすべてギャラリーに保存され、回したり拡大したりでき、STLファイルとして書き出せます。3Dプリンターがあれば、いま組み立てた星があなたの机の上に現れます。</p>
+    </div>
+    <figure class="medio cuadrado">
+      <video muted loop playsinline preload="none" poster="/media/oro.jpg" width="640" height="640" data-bucle>
+        <source src="/media/oro.mp4" type="video/mp4">
+        <source src="/media/oro.webm" type="video/webm">
+      </video>
+      <figcaption>Stellariaのギャラリーで回転する完成した星<span>※画像は完全版のものです</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="seccion compra">
+    <div class="texto">
+      <h2>無料で始めて、購入は一度だけ</h2>
+      <p>無料・時間制限なし：4つの多面体とその10の星型、ガイド付きのゲーム、ギャラリー、STL書き出し。「完全版」を一度購入すると、残りの24の多面体が解放されます。サブスクリプションなし、広告なし、アカウントなし、データ収集なし。オフラインで遊べます。Game Centerは任意です。達成項目とリーダーボードは使いたいときだけ。使わなければ、記録は端末の中に残ります。</p>
+    </div>
+    <div class="placa">
+      <div class="tiendas">
+      <a class="boton" href="https://apps.apple.com/app/apple-store/id6811068096?pt=129444067&ct=web&mt=8">App Store · iPhone・iPad</a>
+      <a class="boton" href="https://apps.apple.com/app/apple-store/id6819857964?pt=129444067&ct=web&mt=12">Mac App Store</a>
+      </div>
+      <ul class="tres">
+        <li>28の多面体 · 234の星型 · 7言語</li>
+        <li>4つの多面体は無料、残りは一度の購入で · 広告なし、アカウントなし、データ収集なし</li>
+      </ul>
+    </div>
+  </section>
+
+  <p class="cierre">紙、インク、朱色：ビジュアルはエル・リシツキーの「プロウン」から語彙を借りています。音楽と効果音は、このゲームのために合成したオリジナルです。スペインで、ひとりで作りました。</p>
+
+  <p class="hojas">
     <a class="hoja" href="/ja/support/">サポート</a>
     <a class="hoja" href="/ja/privacy/">プライバシー</a>
+    <a class="hoja" href="/press/">プレスキット</a>
   </p>
 
   <p class="idiomas"><a href="/es/" hreflang="es" lang="es">Español</a> · <a href="/en/" hreflang="en" lang="en">English</a> · <a href="/fr/" hreflang="fr" lang="fr">Français</a> · <a href="/it/" hreflang="it" lang="it">Italiano</a> · <a href="/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="/de/" hreflang="de" lang="de">Deutsch</a> · <span>日本語</span></p>
   <p class="pie">© 2026 Luis Fernando Lendrino Díaz</p>
 </main>
+<script src="/portada.js"></script>
 </body>
 </html>
