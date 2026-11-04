@@ -82,11 +82,19 @@ cambia por ellos.
 
 ## Las pruebas
 
-Chromium (Playwright), servida en local: 375, 760 y 1280 px en es, de y ja,
-y 375 px en en, fr, it y pt-br. Sin desbordes horizontales ni errores de
-consola; los tres bucles arrancan al verse; partida entera con los botones y
-con el teclado, con un rebote a propósito; «Otra vez»; un toque en móvil
-empieza la partida; con reducir movimiento, todo quieto.
+`herramientas/portada/probar.py` (Playwright), con la web servida en local:
+las siete portadas a 375, 760 y 1280 px sin desbordes horizontales, sin
+errores de consola y con los tres bucles arrancando al verse. También una
+partida entera con los botones y el teclado (con un rebote a propósito, el
+destello y «Otra vez»), otra en móvil con toques y deslizando, y otra con
+reducir movimiento (quieta, sin animación sin jugar, foco en «Otra vez»).
+Las 29 comprobaciones pasan en Chromium. Falta WebKit y Safari de verdad: es
+lo primero de `docs/encargo-code-portada.md`.
+
+`herramientas/portada/medios.py todo` rehace todos los medios desde sus
+fuentes: los `.mp4`, `.jpg`, `.webp` y el favicon salen idénticos byte a
+byte. `textos_desde_ficha.py` comprueba que los textos copiados de la ficha
+siguen iguales.
 
 ## Para tocarla
 
@@ -95,3 +103,5 @@ empieza la partida; con reducir movimiento, todo quieto.
 - La estrella: `portada.js` (los colores de las piezas en `COLORES`, el
   orden de montaje en `ORDEN`, cuánto cuelga la pieza en `CAIDA`).
 - El aspecto: el bloque «La portada» al final de `estilo.css`.
+- Un medio: `herramientas/portada/medios.py <tarea>` (su `LEEME.md` lo explica).
+- Después de cualquier cambio: `./generar.py` y `herramientas/portada/probar.py`.

@@ -43,3 +43,10 @@ tiendas. Los bucles solo se cargan y se reproducen mientras se ven; con
 «reducir movimiento», nada arranca solo. La tarjeta para compartir el
 enlace es `media/compartir.jpg` (1200×630). Cómo se hizo todo, en
 `docs/informe-portada-jugable.md`.
+
+Para trabajar con Claude Code: `CLAUDE.md` reúne las reglas de la casa
+y cómo está hecha la web, y `herramientas/portada/` las pruebas en
+navegador (`probar.py`), los medios (`medios.py`) y los textos que
+vienen de la ficha de la App Store (`textos_desde_ficha.py`), con su
+`LEEME.md`. Lo pendiente de la portada, en
+`docs/encargo-code-portada.md`.
