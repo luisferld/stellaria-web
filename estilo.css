@@ -13,7 +13,7 @@ h1{font-size:34px;margin:0 0 6px}h2{font-size:15px;margin:36px 0 10px}
 .cabecera{display:flex;align-items:flex-start;gap:16px;margin-bottom:34px}
 .placa{background:var(--hoja);border:1px solid var(--tinta);padding:18px 20px;margin:14px 0}
 .placa p{margin:0 0 10px}.placa p:last-child{margin:0}
-.boton{display:inline-block;background:var(--rojo);color:var(--papel);font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:12px 26px;margin:6px 0}
+.boton{display:inline-block;background:var(--rojo);color:#fff;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:12px 26px;margin:6px 0}
 .boton:hover{text-decoration:none;filter:brightness(.95)}
 .hoja{display:inline-block;background:var(--hoja);color:var(--tinta);border:1px solid var(--tinta);font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:11px 22px;margin:6px 8px 6px 0}
 .pie{margin-top:60px;color:var(--tinta-suave);font-size:13px;text-transform:uppercase;letter-spacing:.06em}
@@ -117,3 +117,5 @@ main.portada{max-width:1120px;padding-top:30px}
   .compra{align-items:start}
 }
 @media (prefers-reduced-motion:reduce){.tiendas.brilla .boton{animation:none}}
+/* Bajo la estrella: qué es y qué no (5-11-2026). */
+.muestra{color:var(--tinta-suave);font-size:13px;text-transform:uppercase;letter-spacing:.06em;text-align:center;margin:8px auto 26px;max-width:560px}

@@ -51,7 +51,7 @@ T["es"] = dict(
     priv_titulo="Política de privacidad", fecha="10 de septiembre de 2026",
     priv_resumen=("En una frase:", "Stellaria no recoge datos personales. No crea cuentas, no tiene publicidad, no lleva analíticas y no envía nada a servidores propios ni de terceros."),
     priv=[
-        ("Quién es el responsable", "Stellaria es una aplicación para iPhone y iPad desarrollada y publicada por Luis Fernando Lendrino Díaz, con domicilio en España. Para cualquier cuestión sobre esta política: {correo}."),
+        ("Quién es el responsable", "Stellaria es una aplicación para iPhone, iPad y Mac desarrollada y publicada por Luis Fernando Lendrino Díaz, con domicilio en España. Para cualquier cuestión sobre esta política: {correo}."),
         ("Qué datos se guardan, y dónde", "El juego guarda en tu propio dispositivo el avance (qué estelaciones has completado), tus récords y tus ajustes. Esos datos no salen del dispositivo, no llevan tu nombre ni ningún identificador personal, y se borran al desinstalar la aplicación o desde Ajustes → «Empezar de cero»."),
         ("Compras", "La compra del juego completo se hace a través de la App Store. El pago lo gestiona Apple según su propia política de privacidad; Stellaria no recibe ni conserva datos de pago, ni tu nombre, ni tu dirección. Solo sabe si la compra existe, para abrir el contenido."),
         ("Game Center", "Si decides entrar en Game Center, tus récords y logros se publican en tu cuenta de Apple para que aparezcan en sus tablas y en tu perfil. Es opcional, se apaga en Ajustes, y lo gestiona Apple según su política de privacidad. Stellaria no accede a tu lista de amigos ni a ningún otro dato de la cuenta."),
@@ -61,12 +61,12 @@ T["es"] = dict(
         ("Cambios", "Si alguna versión futura cambiara algo de lo anterior, esta página lo dirá con su fecha, y la aplicación enlazará siempre a la versión vigente."),
     ],
     sop_titulo="Soporte",
-    sop_intro="Dudas, fallos, ideas: {correo}. Si es un fallo, cuéntanos el modelo de iPhone o iPad y qué estabas haciendo; con eso suele bastar.",
+    sop_intro="Dudas, fallos, ideas: {correo}. Si es un fallo, cuéntanos el modelo de iPhone, iPad o Mac y qué estabas haciendo; con eso suele bastar.",
     sop_faq="Preguntas frecuentes",
     sop=[
         ("He comprado el juego completo y no aparece", "Ajustes → «Restaurar compras», con la misma cuenta de la App Store con la que compraste. Si sigue sin aparecer, escríbenos."),
         ("Quiero empezar de cero", "Ajustes → «Empezar de cero» borra el avance y los récords de ese dispositivo. No se puede deshacer."),
-        ("¿Qué necesito?", "Un iPhone o un iPad con iOS 18 o iPadOS 18, o posterior."),
+        ("¿Qué necesito?", "Un iPhone o un iPad con iOS 18 o iPadOS 18, o posterior; o un Mac con macOS 15 o posterior."),
     ],
 )
 
@@ -88,7 +88,7 @@ T["en"] = dict(
     priv_titulo="Privacy policy", fecha="September 10, 2026",
     priv_resumen=("In one sentence:", "Stellaria collects no personal data. It creates no accounts, has no advertising, no analytics, and sends nothing to servers of its own or of third parties."),
     priv=[
-        ("Who is responsible", "Stellaria is an app for iPhone and iPad developed and published by Luis Fernando Lendrino Díaz, resident in Spain. For any question about this policy: {correo}."),
+        ("Who is responsible", "Stellaria is an app for iPhone, iPad and Mac developed and published by Luis Fernando Lendrino Díaz, resident in Spain. For any question about this policy: {correo}."),
         ("What data is stored, and where", "The game stores on your own device your progress (which stellations you have completed), your records and your settings. That data never leaves the device, carries no name or personal identifier, and is deleted when you uninstall the app or from Settings → “Start from scratch”."),
         ("Purchases", "The purchase of the full game is made through the App Store. Apple handles the payment under its own privacy policy; Stellaria neither receives nor keeps payment data, your name or your address. It only knows whether the purchase exists, in order to unlock the content."),
         ("Game Center", "If you choose to sign in to Game Center, your records and achievements are published to your Apple account so that they appear on its leaderboards and on your profile. It is optional, it can be turned off in Settings, and Apple handles it under its privacy policy. Stellaria does not access your friends list or any other account data."),
@@ -98,12 +98,12 @@ T["en"] = dict(
         ("Changes", "If a future version changed any of the above, this page would say so with its date, and the app will always link to the version in force."),
     ],
     sop_titulo="Support",
-    sop_intro="Questions, bugs, ideas: {correo}. If it is a bug, tell us the iPhone or iPad model and what you were doing; that is usually enough.",
+    sop_intro="Questions, bugs, ideas: {correo}. If it is a bug, tell us the iPhone, iPad or Mac model and what you were doing; that is usually enough.",
     sop_faq="Frequently asked questions",
     sop=[
         ("I bought the full game and it doesn't show up", "Settings → “Restore purchases”, with the same App Store account you bought it with. If it still doesn't show up, write to us."),
         ("I want to start from scratch", "Settings → “Start from scratch” erases the progress and records on that device. It cannot be undone."),
-        ("What do I need?", "An iPhone or an iPad with iOS 18 or iPadOS 18, or later."),
+        ("What do I need?", "An iPhone or an iPad with iOS 18 or iPadOS 18, or later; or a Mac with macOS 15 or later."),
     ],
 )
 
@@ -125,7 +125,7 @@ T["fr"] = dict(
     priv_titulo="Politique de confidentialité", fecha="10 septembre 2026",
     priv_resumen=("En une phrase :", "Stellaria ne collecte aucune donnée personnelle. Pas de compte, pas de publicité, pas de statistiques, et rien n’est envoyé à des serveurs, ni les nôtres ni ceux de tiers."),
     priv=[
-        ("Qui est responsable", "Stellaria est une application pour iPhone et iPad développée et publiée par Luis Fernando Lendrino Díaz, domicilié en Espagne. Pour toute question sur cette politique : {correo}."),
+        ("Qui est responsable", "Stellaria est une application pour iPhone, iPad et Mac développée et publiée par Luis Fernando Lendrino Díaz, domicilié en Espagne. Pour toute question sur cette politique : {correo}."),
         ("Quelles données sont conservées, et où", "Le jeu conserve sur votre propre appareil votre progression (les stellations que vous avez terminées), vos records et vos réglages. Ces données ne quittent pas l’appareil, ne portent ni votre nom ni aucun identifiant personnel, et sont effacées quand vous désinstallez l’application ou depuis Réglages → « Repartir de zéro »."),
         ("Achats", "L’achat du jeu complet se fait par l’App Store. Le paiement est géré par Apple selon sa propre politique de confidentialité ; Stellaria ne reçoit ni ne conserve de données de paiement, ni votre nom, ni votre adresse. Elle sait seulement si l’achat existe, pour débloquer le contenu."),
         ("Game Center", "Si vous choisissez de vous connecter à Game Center, vos records et vos succès sont publiés sur votre compte Apple pour apparaître dans ses classements et sur votre profil. C’est facultatif, cela se désactive dans les Réglages, et Apple le gère selon sa politique de confidentialité. Stellaria n’accède ni à votre liste d’amis ni à aucune autre donnée du compte."),
@@ -135,12 +135,12 @@ T["fr"] = dict(
         ("Modifications", "Si une version future changeait l’un des points ci-dessus, cette page le dirait avec sa date, et l’application renverra toujours à la version en vigueur."),
     ],
     sop_titulo="Assistance",
-    sop_intro="Questions, bugs, idées : {correo}. S’il s’agit d’un bug, indiquez-nous le modèle d’iPhone ou d’iPad et ce que vous faisiez ; cela suffit en général.",
+    sop_intro="Questions, bugs, idées : {correo}. S’il s’agit d’un bug, indiquez-nous le modèle d’iPhone, d’iPad ou de Mac et ce que vous faisiez ; cela suffit en général.",
     sop_faq="Questions fréquentes",
     sop=[
         ("J’ai acheté le jeu complet et il n’apparaît pas", "Réglages → « Restaurer les achats », avec le même compte App Store que celui de l’achat. S’il n’apparaît toujours pas, écrivez-nous."),
         ("Je veux repartir de zéro", "Réglages → « Repartir de zéro » efface la progression et les records de cet appareil. C’est irréversible."),
-        ("De quoi ai-je besoin ?", "Un iPhone ou un iPad avec iOS 18 ou iPadOS 18, ou une version ultérieure."),
+        ("De quoi ai-je besoin ?", "Un iPhone ou un iPad avec iOS 18 ou iPadOS 18, ou une version ultérieure ; ou un Mac avec macOS 15 ou une version ultérieure."),
     ],
 )
 
@@ -162,7 +162,7 @@ T["it"] = dict(
     priv_titulo="Informativa sulla privacy", fecha="10 settembre 2026",
     priv_resumen=("In una frase:", "Stellaria non raccoglie dati personali. Non crea account, non ha pubblicità, non usa analitiche e non invia nulla a server propri o di terzi."),
     priv=[
-        ("Chi è il titolare", "Stellaria è un’applicazione per iPhone e iPad sviluppata e pubblicata da Luis Fernando Lendrino Díaz, domiciliato in Spagna. Per qualsiasi domanda su questa informativa: {correo}."),
+        ("Chi è il titolare", "Stellaria è un’applicazione per iPhone, iPad e Mac sviluppata e pubblicata da Luis Fernando Lendrino Díaz, domiciliato in Spagna. Per qualsiasi domanda su questa informativa: {correo}."),
         ("Quali dati si conservano, e dove", "Il gioco conserva sul tuo dispositivo i progressi (quali stellazioni hai completato), i tuoi record e le tue impostazioni. Quei dati non escono dal dispositivo, non portano il tuo nome né alcun identificativo personale, e si cancellano disinstallando l’applicazione o da Impostazioni → «Ricominciare da zero»."),
         ("Acquisti", "L’acquisto del gioco completo avviene tramite l’App Store. Il pagamento lo gestisce Apple secondo la propria informativa sulla privacy; Stellaria non riceve né conserva dati di pagamento, né il tuo nome, né il tuo indirizzo. Sa soltanto se l’acquisto esiste, per sbloccare il contenuto."),
         ("Game Center", "Se decidi di accedere a Game Center, i tuoi record e i tuoi obiettivi vengono pubblicati sul tuo account Apple perché compaiano nelle sue classifiche e nel tuo profilo. È facoltativo, si disattiva nelle Impostazioni, e lo gestisce Apple secondo la sua informativa sulla privacy. Stellaria non accede alla tua lista di amici né a nessun altro dato dell’account."),
@@ -172,12 +172,12 @@ T["it"] = dict(
         ("Modifiche", "Se una versione futura cambiasse qualcosa di quanto sopra, questa pagina lo dirà con la sua data, e l’applicazione rimanderà sempre alla versione in vigore."),
     ],
     sop_titulo="Assistenza",
-    sop_intro="Dubbi, errori, idee: {correo}. Se è un errore, dicci il modello di iPhone o iPad e cosa stavi facendo; di solito basta.",
+    sop_intro="Dubbi, errori, idee: {correo}. Se è un errore, dicci il modello di iPhone, iPad o Mac e cosa stavi facendo; di solito basta.",
     sop_faq="Domande frequenti",
     sop=[
         ("Ho comprato il gioco completo e non compare", "Impostazioni → «Ripristina acquisti», con lo stesso account App Store con cui hai comprato. Se continua a non comparire, scrivici."),
         ("Voglio ricominciare da zero", "Impostazioni → «Ricominciare da zero» cancella i progressi e i record di quel dispositivo. Non si può annullare."),
-        ("Cosa mi serve?", "Un iPhone o un iPad con iOS 18 o iPadOS 18, o successivo."),
+        ("Cosa mi serve?", "Un iPhone o un iPad con iOS 18 o iPadOS 18, o successivo; oppure un Mac con macOS 15 o successivo."),
     ],
 )
 
@@ -199,7 +199,7 @@ T["pt-br"] = dict(
     priv_titulo="Política de privacidade", fecha="10 de setembro de 2026",
     priv_resumen=("Em uma frase:", "o Stellaria não coleta dados pessoais. Não cria contas, não tem publicidade, não usa análises e não envia nada a servidores próprios nem de terceiros."),
     priv=[
-        ("Quem é o responsável", "O Stellaria é um aplicativo para iPhone e iPad desenvolvido e publicado por Luis Fernando Lendrino Díaz, com domicílio na Espanha. Para qualquer questão sobre esta política: {correo}."),
+        ("Quem é o responsável", "O Stellaria é um aplicativo para iPhone, iPad e Mac desenvolvido e publicado por Luis Fernando Lendrino Díaz, com domicílio na Espanha. Para qualquer questão sobre esta política: {correo}."),
         ("Que dados são guardados, e onde", "O jogo guarda no seu próprio dispositivo o progresso (quais estelações você concluiu), os seus recordes e os seus ajustes. Esses dados não saem do dispositivo, não levam o seu nome nem nenhum identificador pessoal, e são apagados ao desinstalar o aplicativo ou em Ajustes → «Começar do zero»."),
         ("Compras", "A compra do jogo completo é feita pela App Store. O pagamento é gerenciado pela Apple segundo a sua própria política de privacidade; o Stellaria não recebe nem guarda dados de pagamento, nem o seu nome, nem o seu endereço. Só sabe se a compra existe, para liberar o conteúdo."),
         ("Game Center", "Se você decidir entrar no Game Center, os seus recordes e conquistas são publicados na sua conta Apple para aparecerem nas suas classificações e no seu perfil. É opcional, desliga-se nos Ajustes, e é gerenciado pela Apple segundo a sua política de privacidade. O Stellaria não acessa a sua lista de amigos nem nenhum outro dado da conta."),
@@ -209,12 +209,12 @@ T["pt-br"] = dict(
         ("Alterações", "Se alguma versão futura mudar algo do que está acima, esta página dirá isso com a sua data, e o aplicativo sempre levará à versão em vigor."),
     ],
     sop_titulo="Suporte",
-    sop_intro="Dúvidas, erros, ideias: {correo}. Se for um erro, conte o modelo de iPhone ou iPad e o que você estava fazendo; costuma bastar.",
+    sop_intro="Dúvidas, erros, ideias: {correo}. Se for um erro, conte o modelo de iPhone, iPad ou Mac e o que você estava fazendo; costuma bastar.",
     sop_faq="Perguntas frequentes",
     sop=[
         ("Comprei o jogo completo e ele não aparece", "Ajustes → «Restaurar compras», com a mesma conta da App Store com que comprou. Se continuar sem aparecer, escreva para nós."),
         ("Quero começar do zero", "Ajustes → «Começar do zero» apaga o progresso e os recordes desse dispositivo. Não é possível desfazer."),
-        ("O que eu preciso?", "Um iPhone ou um iPad com iOS 18 ou iPadOS 18, ou posterior."),
+        ("O que eu preciso?", "Um iPhone ou um iPad com iOS 18 ou iPadOS 18, ou posterior; ou um Mac com macOS 15 ou posterior."),
     ],
 )
 
@@ -236,7 +236,7 @@ T["de"] = dict(
     priv_titulo="Datenschutzerklärung", fecha="10. September 2026",
     priv_resumen=("In einem Satz:", "Stellaria sammelt keine personenbezogenen Daten. Es legt keine Konten an, hat keine Werbung, keine Analysen, und sendet nichts an eigene oder fremde Server."),
     priv=[
-        ("Wer verantwortlich ist", "Stellaria ist eine App für iPhone und iPad, entwickelt und veröffentlicht von Luis Fernando Lendrino Díaz, wohnhaft in Spanien. Bei Fragen zu dieser Erklärung: {correo}."),
+        ("Wer verantwortlich ist", "Stellaria ist eine App für iPhone, iPad und Mac, entwickelt und veröffentlicht von Luis Fernando Lendrino Díaz, wohnhaft in Spanien. Bei Fragen zu dieser Erklärung: {correo}."),
         ("Welche Daten gespeichert werden, und wo", "Das Spiel speichert auf deinem eigenen Gerät deinen Fortschritt (welche Stellationen du abgeschlossen hast), deine Rekorde und deine Einstellungen. Diese Daten verlassen das Gerät nicht, tragen weder deinen Namen noch eine persönliche Kennung, und werden gelöscht, wenn du die App deinstallierst oder unter Einstellungen → „Von vorn beginnen“."),
         ("Käufe", "Der Kauf des ganzen Spiels läuft über den App Store. Die Zahlung wickelt Apple nach seiner eigenen Datenschutzerklärung ab; Stellaria erhält und speichert weder Zahlungsdaten noch deinen Namen oder deine Adresse. Es weiß nur, ob der Kauf existiert, um den Inhalt freizuschalten."),
         ("Game Center", "Wenn du dich bei Game Center anmeldest, werden deine Rekorde und Erfolge in deinem Apple-Account veröffentlicht, damit sie in dessen Bestenlisten und in deinem Profil erscheinen. Das ist freiwillig, lässt sich in den Einstellungen abschalten und wird von Apple nach seiner Datenschutzerklärung verwaltet. Stellaria greift weder auf deine Freundesliste noch auf andere Daten des Accounts zu."),
@@ -246,12 +246,12 @@ T["de"] = dict(
         ("Änderungen", "Sollte eine künftige Version etwas davon ändern, wird diese Seite es mit Datum sagen, und die App verweist immer auf die geltende Fassung."),
     ],
     sop_titulo="Support",
-    sop_intro="Fragen, Fehler, Ideen: {correo}. Wenn es ein Fehler ist, nenn uns das iPhone- oder iPad-Modell und was du gerade gemacht hast; das reicht meistens.",
+    sop_intro="Fragen, Fehler, Ideen: {correo}. Wenn es ein Fehler ist, nenn uns das iPhone-, iPad- oder Mac-Modell und was du gerade gemacht hast; das reicht meistens.",
     sop_faq="Häufige Fragen",
     sop=[
         ("Ich habe das ganze Spiel gekauft, und es erscheint nicht", "Einstellungen → „Käufe wiederherstellen“, mit demselben App-Store-Account, mit dem du gekauft hast. Wenn es weiterhin nicht erscheint, schreib uns."),
         ("Ich möchte von vorn beginnen", "Einstellungen → „Von vorn beginnen“ löscht Fortschritt und Rekorde auf diesem Gerät. Das lässt sich nicht rückgängig machen."),
-        ("Was brauche ich?", "Ein iPhone oder ein iPad mit iOS 18 oder iPadOS 18 oder neuer."),
+        ("Was brauche ich?", "Ein iPhone oder ein iPad mit iOS 18 oder iPadOS 18 oder neuer; oder ein Mac mit macOS 15 oder neuer."),
     ],
 )
 
@@ -273,7 +273,7 @@ T["ja"] = dict(
     priv_titulo="プライバシーポリシー", fecha="2026年9月10日",
     priv_resumen=("ひとことで言うと：", "Stellariaは個人データを収集しません。アカウントを作らず、広告も分析もなく、自社や第三者のサーバーに何も送信しません。"),
     priv=[
-        ("責任者", "Stellariaは、スペイン在住のLuis Fernando Lendrino Díazが開発・公開するiPhoneおよびiPad向けアプリです。このポリシーに関するお問い合わせは {correo} まで。"),
+        ("責任者", "Stellariaは、スペイン在住のLuis Fernando Lendrino Díazが開発・公開するiPhone、iPadおよびMac向けアプリです。このポリシーに関するお問い合わせは {correo} まで。"),
         ("保存されるデータと、その場所", "ゲームは、進行状況（どの星型を完成させたか）、記録、設定をあなたの端末内に保存します。これらのデータは端末の外に出ず、名前や個人を特定する識別子を含まず、アプリを削除するか「設定」→「はじめからやり直す」で消去されます。"),
         ("購入", "完全版の購入はApp Storeを通じて行われます。支払いはAppleが自社のプライバシーポリシーに従って処理します。Stellariaは支払い情報、氏名、住所を受け取らず、保存もしません。コンテンツを開くために、購入の有無だけを知ります。"),
         ("Game Center", "Game Centerにサインインすると、記録と実績はあなたのAppleアカウントに公開され、ランキングとプロフィールに表示されます。任意であり、「設定」でオフにでき、Appleが自社のプライバシーポリシーに従って管理します。Stellariaは友達リストやその他のアカウント情報にアクセスしません。"),
@@ -283,12 +283,12 @@ T["ja"] = dict(
         ("変更", "将来のバージョンで上記の内容が変わる場合は、このページに日付とともに記載し、アプリは常に有効なバージョンにリンクします。"),
     ],
     sop_titulo="サポート",
-    sop_intro="質問、不具合、アイデアは {correo} まで。不具合の場合は、iPhoneまたはiPadの機種と、何をしていたかを教えてください。たいていはそれで十分です。",
+    sop_intro="質問、不具合、アイデアは {correo} まで。不具合の場合は、iPhone、iPadまたはMacの機種と、何をしていたかを教えてください。たいていはそれで十分です。",
     sop_faq="よくある質問",
     sop=[
         ("完全版を購入したのに表示されない", "「設定」→「購入を復元」を、購入したときと同じApp Storeアカウントで行ってください。それでも表示されない場合はご連絡ください。"),
         ("はじめからやり直したい", "「設定」→「はじめからやり直す」で、その端末の進行状況と記録を消去します。取り消せません。"),
-        ("必要なものは？", "iOS 18またはiPadOS 18以降のiPhoneまたはiPad。"),
+        ("必要なものは？", "iOS 18またはiPadOS 18以降のiPhoneまたはiPad、あるいはmacOS 15以降のMac。"),
     ],
 )
 
@@ -422,6 +422,7 @@ def portada(idioma):
         <button type="button" class="jugar" data-accion="otra" hidden>{p["otra"]}</button>
       </div>
     </div>
+    <p class="muestra">{p["muestra"]}</p>
     <p class="concepto">{p["concepto"]}</p>
     <div class="tiendas" data-brilla>
       {tiendas}
@@ -641,7 +642,7 @@ PRENSA = {
             ("Name", "Stellaria: Polyhedra Puzzle (Spanish storefronts: Stellaria: puzle de poliedros)"),
             ("Subtitle", "Stellations, piece by piece"),
             ("Developer", "Luis Fernando Lendrino Díaz, independent developer, Spain (one person)"),
-            ("Platforms", "iPhone and iPad; iOS 18 / iPadOS 18 or later"),
+            ("Platforms", "iPhone, iPad and Mac; iOS 18 / iPadOS 18 / macOS 15 or later"),
             ("Release", "September 21, 2026 (1.0); 1.0.1 on September 22, 2026"),
             ("Price", "Free download: four polyhedra with all their stellations, the guided game, the Gallery and STL export, with no time limit. One in-app purchase, «The full game», unlocks the other 24 polyhedra: €4.99 in Spain; local prices set by the App Store. No subscriptions."),
             ("Size", "6.8 MB"),
@@ -697,7 +698,7 @@ PRENSA = {
             ("Nombre", "Stellaria: puzle de poliedros (en las tiendas en inglés: Stellaria: Polyhedra Puzzle)"),
             ("Subtítulo", "Estelaciones, pieza a pieza"),
             ("Desarrollador", "Luis Fernando Lendrino Díaz, desarrollador independiente, España (una sola persona)"),
-            ("Plataformas", "iPhone y iPad; iOS 18 / iPadOS 18 o posterior"),
+            ("Plataformas", "iPhone, iPad y Mac; iOS 18 / iPadOS 18 / macOS 15 o posterior"),
             ("Publicación", "21 de septiembre de 2026 (1.0); 1.0.1 el 22 de septiembre de 2026"),
             ("Precio", "Descarga gratuita: cuatro poliedros con todas sus estelaciones, la partida guiada, la Galería y la exportación a STL, sin límite de tiempo. Una única compra, «El juego completo», abre los otros 24 poliedros: 4,99 € en España; en el resto, el precio local de la App Store. Sin suscripciones."),
             ("Tamaño", "6,8 MB"),
