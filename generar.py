@@ -422,11 +422,11 @@ def portada(idioma):
         <button type="button" class="jugar" data-accion="otra" hidden>{p["otra"]}</button>
       </div>
     </div>
-    <p class="muestra">{p["muestra"]}</p>
     <p class="concepto">{p["concepto"]}</p>
     <div class="tiendas" data-brilla>
       {tiendas}
       <p class="gratis">{t["datos"][1]}</p>
+      <p class="muestra">{p["muestra"]}</p>
     </div>
   </section>
 

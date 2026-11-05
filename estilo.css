@@ -118,4 +118,4 @@ main.portada{max-width:1120px;padding-top:30px}
 }
 @media (prefers-reduced-motion:reduce){.tiendas.brilla .boton{animation:none}}
 /* Bajo la estrella: qué es y qué no (5-11-2026). */
-.muestra{color:var(--tinta-suave);font-size:13px;text-transform:uppercase;letter-spacing:.06em;text-align:center;margin:8px auto 26px;max-width:560px}
+.muestra{color:var(--tinta-suave);font-size:13px;text-transform:uppercase;letter-spacing:.06em;margin:14px 0 0}
