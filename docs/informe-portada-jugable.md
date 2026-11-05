@@ -105,3 +105,21 @@ siguen iguales.
 - El aspecto: el bloque «La portada» al final de `estilo.css`.
 - Un medio: `herramientas/portada/medios.py <tarea>` (su `LEEME.md` lo explica).
 - Después de cualquier cambio: `./generar.py` y `herramientas/portada/probar.py`.
+
+## Después (5-11-2026, en el Mac)
+
+- La rama se trajo del paquete sobre `9951056`, regeneró igual y se
+  sirvió en local; Luis la vio en Safari: «La web muy bien».
+- Añadido bajo la estrella un pie en los siete idiomas que dice lo que
+  es (una muestra de dos gestos, girar y lanzar) y dónde está el juego de
+  verdad (los vídeos de abajo): duda de Luis sobre si el minijuego es
+  representativo, resuelta sin pedir perdón.
+- Decisiones de Luis: botones de las tiendas con texto blanco
+  (4,46:1); el Mac en soporte, privacidad y prensa, con «macOS 15 o
+  posterior» (la versión mínima del proyecto de Xcode), en los siete
+  idiomas y en los dos del kit de prensa.
+- No se pasó `probar.py` con WebKit (instalar Playwright pide bajar
+  navegadores y el control de permisos de la sesión lo bloquea); la
+  portada se comprobó en el navegador de la sesión (carga, sin errores de
+  consola, sin desbordamiento) y en Safari por Luis.
+- Publicada el 5-11-2026 fusionando `portada-jugable` en `main`.
